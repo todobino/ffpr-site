@@ -60,37 +60,43 @@ export const teamMembers = [
     name: 'Dan Rubock',
     role: 'Marketing/Media',
     image: 'team-member-1',
-    bio: 'Leads our marketing and media outreach efforts.'
+    bio: 'Dan has worked with Mike Maloney since 2009. As a former member of GoldSilver.com’s board of directors, he helped position the company for a successful acquisition. Dan is a media specialist from Australia, and took an equity deal with Mr. Maloney in return for running the marketing/media divisions of Mike’s companies. It was his foresight of foregoing traditional media outlets and concentrating on YouTube that led to the smash hit video series Hidden Secrets of Money, which helped to make GoldSilver.com one of the most visible precious metals dealer’s on the internet. Since then, Dan has helped establish Freedom Farms from the very beginning, and he is responsible for messaging and marketing for Freedom Farms, including the possibility of a ‘reality show’ based on the farm.'
   },
   {
     name: 'Pedro Prado',
     role: 'Executive',
     image: 'team-member-2',
-    bio: 'Part of the executive team driving our mission forward.'
+    bio: 'Pedro Prado is a farmer specialized in raising pasture-raised animals roaming free on grass, such as laying hens, beef cattle, pigs, and sheep. He is a passionate advocate for regenerative agriculture, blending his expertise in industrial microbiology with sustainable livestock practices. With a Bachelor’s degree in Industrial Microbiology from the University of Puerto Rico and a scientific career that includes pioneering research in bioremediation for the U.S. Department of Energy, Pedro has tirelessly worked to improve soil health and animal welfare with the goal of producing nutrient-dense and healthy food. His training under the guidance of farmers like Joel Salatin and Greg Judy, combined with his current role as Director of Operations at Finca Pastoreo, has established him as a prominent figure in regenerative agriculture in Puerto Rico. His  innovative approach to holistic pasture management and ethical livestock production reflects his commitment to sustainability.'
+  },
+  {
+    name: 'K. L.',
+    role: 'Executive',
+    image: 'team-member-3',
+    bio: 'Since the initial sharing of the vision of Freedom Farms K. has been shaping and transforming that project vision into a real-life working company. With over 20 years K. has lead in executive roles in energy, wealth management, investment banking, and the insurance industry. As founder and director of two Swiss companies, K. has proven to boost bottom line net-profits for businesses by designing high scalable target operating models underpinned by top class technology integrations including data analytics, machine learning, ecommerce and the open source protocols like bitcoin. His career journey has allowed him to lead projects in Ireland, Switzerland as well as the United States.'
   },
   {
     name: 'Philip W. Sarsons',
     role: 'Executive',
     image: 'team-member-3',
-    bio: 'Executive team member focused on operational excellence.'
+    bio: 'Mr. Sarsons has already submitted a combined value of $70.5M of federal opportunities to support Freedom Farms, through the USDA and DOE. He has aligned the Farms project with the NRCS, for their financial supports to physically build out the project, and VETS, Veteran Employment Training Services, expanding regenerative farming into the social realm, for meaningful, supported employment opportunities to Puerto Rican veteran servicemen and women. Phil arrives to Freedom Farms from delivering public services in Canada, securing millions of dollars in sponsorships of post-secondary education plans, for hundreds of underemployed people. Philip brings a near-decade of policy analysis and public services delivery to Freedom Farms, as well as his own personal experience homesteading.'
   },
   {
     name: 'Nikola Spassov',
     role: 'Farm Manager',
     image: 'team-member-1',
-    bio: 'Manages the day-to-day operations of our farm.'
+    bio: 'Nikola’s passion for regenerative agriculture has taken him across the USA and Europe, learning from successful and high-profile farmers, as well as leading workshops in Central & South America, Puerto Rico, and in Bulgaria - teaching in three languages. Nikola’s intimate knowledge of the Jayuya landscape is fundamental to the growing success of food security in the area. Niko is also professional boat builder, and, the National Champion of Bulgaria in both boat racing and water skiing! He loves the Caribbean waters, and though has no titles in PR — yet! — he has been chopping surf and ruffling the local waves in PR’s wind surfing competitions, the Expression Sessions.'
   },
   {
     name: 'Brian Kimble',
     role: 'Executive',
     image: 'team-member-2',
-    bio: 'Key member of our executive leadership team.'
+    bio: 'Brian Kimble is the Head of Business Development at Symton Inc., the leading provider of Black Soldier Fly Larvae for reptile nutrition in the U.S. He drives strategic growth and industry partnerships, expanding Symton’s impact in pet nutrition, insect agriculture, and sustainable waste-to-value solutions.'
   },
   {
     name: 'James McCandless',
     role: 'Tax Attorney',
     image: 'team-member-3',
-    bio: 'Provides expert legal and tax guidance.'
+    bio: 'Founder & Principal of JML Consulting, Big 4 Alumnus. Fueled by a passion for corporate strategy and tax optimization, James is a leading Corporate Tax Attorney specializing in the Puerto Rico Incentives Code. James’ proven track record expertly guides wealthy individuals and sophisticated multinationals through the complexities of conducting business in Puerto Rico, leveraging PR\'s tax incentives to drive success.'
   }
 ];
 
