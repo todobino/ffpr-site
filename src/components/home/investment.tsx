@@ -7,7 +7,6 @@ import { getPlaceholderImage } from "@/lib/placeholder-images";
 
 
 export function Investment() {
-    const investmentImage = getPlaceholderImage("investment-image");
   return (
     <section className="bg-secondary/50">
       <div className="container grid grid-cols-1 md:grid-cols-2 gap-12 items-center py-12 md:py-24">
@@ -34,15 +33,13 @@ export function Investment() {
           </ul>
         </div>
         <div className="aspect-video w-full relative">
-            {investmentImage && (
-                <Image
-                    src={investmentImage.imageUrl}
-                    alt={investmentImage.description}
-                    data-ai-hint={investmentImage.imageHint}
-                    fill
-                    className="rounded-lg shadow-lg object-cover"
-                />
-            )}
+            <Image
+                src="/forest-farm.jpg"
+                alt="A lush forest farm with a variety of trees and plants."
+                data-ai-hint="forest farm"
+                fill
+                className="rounded-lg shadow-lg object-cover"
+            />
         </div>
       </div>
     </section>
