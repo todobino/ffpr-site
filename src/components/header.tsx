@@ -60,7 +60,7 @@ export function Header() {
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  "transition-colors px-4 py-2 rounded-full text-sm",
+                  "px-4 py-2 rounded-full text-sm",
                   pathname === item.href
                     ? "bg-primary text-primary-foreground"
                     : "text-foreground/60 hover:bg-primary/10 hover:text-primary"
