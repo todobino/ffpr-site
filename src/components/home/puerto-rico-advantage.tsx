@@ -1,23 +1,18 @@
 
 import Image from "next/image";
-import { getPlaceholderImage } from "@/lib/placeholder-images";
 import Link from "next/link";
 
 export function PuertoRicoAdvantage() {
-    const advantageImage = getPlaceholderImage("puerto-rico-advantage");
   return (
     <section className="bg-background">
       <div className="container grid grid-cols-1 md:grid-cols-2 gap-12 items-center py-12 md:py-24">
         <div className="aspect-video w-full relative">
-            {advantageImage && (
-                <Image
-                    src={advantageImage.imageUrl}
-                    alt={advantageImage.description}
-                    data-ai-hint={advantageImage.imageHint}
-                    fill
-                    className="rounded-lg shadow-lg object-cover"
-                />
-            )}
+            <Image
+                src="/sustainable-pr.jpg"
+                alt="Sustainable agriculture in Puerto Rico"
+                fill
+                className="rounded-lg shadow-lg object-cover"
+            />
         </div>
         <div className="space-y-4">
           <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary tracking-tight">
