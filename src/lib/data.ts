@@ -1,3 +1,4 @@
+
 import { Leaf, DollarSign, Zap, Users, Briefcase, Calendar } from 'lucide-react';
 
 export const features = [
@@ -35,7 +36,7 @@ export const teamMembers = [
     name: 'Derek Speigner',
     role: 'Boardmember',
     image: 'team-member-3',
-    bio: 'Contributes to our long-term vision and governance.'
+    bio: 'Co-founder & CEO Arise Equity Management & Affiliates. Having built a $200M portfolio of best-in-the-market real estate assets across Texas, Derek is a strategic business leader that see’s value and attacks opportunities. His knack for investing since joining the professional real estate investment industry stems from prior work in Fortune 10 downstream and midstream oil & gas production. His experience in chemical engineering & process technology comes from the largest public and private producers in America. Bringing with him the lessons of history’s most influential industry – operating the nation’s most profitable, complex, and century-old multi-billion dollar revenue refining facilities – lends itself perfectly to the yet unsolved and complex needs of regenerative agriculture at scale. '
   },
   {
     name: 'Robby Marsh',
