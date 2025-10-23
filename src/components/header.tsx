@@ -19,7 +19,7 @@ export function Header() {
     <div className="sticky top-4 z-50 flex justify-center">
       <header className="w-full max-w-lg rounded-full border border-border/40 bg-background/95 shadow-md backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-14 items-center justify-between">
-          <div className="mr-4 hidden md:flex">
+          <div className="mr-4 flex">
             <Logo />
           </div>
           <div className="md:hidden">
@@ -31,18 +31,20 @@ export function Header() {
                 </Button>
               </SheetTrigger>
               <SheetContent side="left" className="pr-0">
-                <Logo />
-                <div className="flex flex-col space-y-4 mt-8">
+                <div className="p-4">
+                  <Logo />
+                </div>
+                <div className="flex flex-col space-y-4 mt-4">
                   {siteConfig.navItems.map((item) => (
                     <Link
                       key={item.href}
                       href={item.href}
                       onClick={() => setMobileMenuOpen(false)}
                       className={cn(
-                        "text-lg font-medium font-headline",
+                        "text-lg font-medium font-headline px-4 py-2 rounded-md",
                         pathname === item.href
-                          ? "text-primary"
-                          : "text-muted-foreground"
+                          ? "text-primary bg-primary/10"
+                          : "text-muted-foreground hover:bg-muted"
                       )}
                     >
                       {item.title}
@@ -51,9 +53,6 @@ export function Header() {
                 </div>
               </SheetContent>
             </Sheet>
-            <div className="flex-1 justify-start">
-               <Logo />
-            </div>
           </div>
           <nav className="hidden font-headline md:flex md:gap-6">
             {siteConfig.navItems.map((item) => (
