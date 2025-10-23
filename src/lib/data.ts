@@ -23,7 +23,7 @@ export const teamMembers = [
     name: 'Mike Maloney',
     role: 'Board Chair',
     image: 'team-member-1',
-    bio: 'Experienced leader guiding our strategic direction.'
+    bio: 'Founder of Freedom Farms, Mike is a relentless advocate of maximum resilience, freedom and prosperity. As a world-renown economist, monetary historian, and author of the two best-selling books on precious metals investing, Mike is host of a YouTube channel with over 125 million views and the smash hit video series Hidden Secrets of Money. In 2005, he founded one of the world’s most respected precious metals dealers, GoldSilver.com, which has since reached more than $2 billion in total sales. He is also an exceptional industrial designer. His designs from the 1980s landed him the cover of international design magazine, and permanent placement in one of the world’s greatest museums, the Royal Queen Victoria, Prince Albert Museum in London.'
   },
   {
     name: 'Robert Helms',
