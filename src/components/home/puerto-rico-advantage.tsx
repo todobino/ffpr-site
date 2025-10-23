@@ -1,7 +1,6 @@
 
 import Image from "next/image";
 import { getPlaceholderImage } from "@/lib/placeholder-images";
-import { Leaf } from "lucide-react";
 import Link from "next/link";
 
 export function PuertoRicoAdvantage() {
@@ -9,7 +8,7 @@ export function PuertoRicoAdvantage() {
   return (
     <section className="bg-background">
       <div className="container grid grid-cols-1 md:grid-cols-2 gap-12 items-center py-12 md:py-24">
-        <div className="aspect-square w-full relative">
+        <div className="aspect-video w-full relative">
             {advantageImage && (
                 <Image
                     src={advantageImage.imageUrl}
@@ -21,9 +20,6 @@ export function PuertoRicoAdvantage() {
             )}
         </div>
         <div className="space-y-4">
-            <div className="p-3 bg-primary/10 rounded-full inline-block">
-                <Leaf className="h-8 w-8 text-primary" />
-            </div>
           <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary tracking-tight">
             The Puerto Rico Advantage
           </h2>
