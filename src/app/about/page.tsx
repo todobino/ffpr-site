@@ -1,8 +1,10 @@
+
 import Image from "next/image";
 import { getPlaceholderImage } from "@/lib/placeholder-images";
 import { teamMembers } from "@/lib/data";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { cn } from "@/lib/utils";
 
 export default function AboutPage() {
   const aboutImage = getPlaceholderImage("about-us-main");
@@ -45,24 +47,31 @@ export default function AboutPage() {
         <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary tracking-tight mb-12">
           Meet Our Team
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {teamMembers.map((member) => {
+        <div className="space-y-16">
+          {teamMembers.map((member, index) => {
             const memberImage = getPlaceholderImage(member.image);
+            const isReversed = index % 2 !== 0;
+
             return (
-              <Card key={member.name} className="bg-secondary/50 border-0">
-                <CardHeader className="items-center">
-                  <Avatar className="w-24 h-24 mb-4">
+              <Card key={member.name} className="bg-secondary/50 border-0 overflow-hidden">
+                <div className={cn("grid grid-cols-1 md:grid-cols-3 items-center gap-8", isReversed ? "md:grid-flow-col-dense" : "")}>
+                  <div className={cn("relative w-full h-80 md:h-full", isReversed ? "md:col-start-3" : "")}>
                     {memberImage && (
-                      <AvatarImage src={memberImage.imageUrl} alt={member.name} data-ai-hint={memberImage.imageHint} />
+                      <Image
+                        src={memberImage.imageUrl}
+                        alt={member.name}
+                        data-ai-hint={memberImage.imageHint}
+                        fill
+                        className="object-cover"
+                      />
                     )}
-                    <AvatarFallback>{member.name.charAt(0)}</AvatarFallback>
-                  </Avatar>
-                  <CardTitle className="font-headline text-2xl">{member.name}</CardTitle>
-                  <p className="text-primary font-semibold">{member.role}</p>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">{member.bio}</p>
-                </CardContent>
+                  </div>
+                  <div className="md:col-span-2 p-8 text-left">
+                    <h3 className="font-headline text-2xl font-bold">{member.name}</h3>
+                    <p className="text-primary font-semibold text-lg mb-4">{member.role}</p>
+                    <p className="text-muted-foreground">{member.bio}</p>
+                  </div>
+                </div>
               </Card>
             );
           })}
