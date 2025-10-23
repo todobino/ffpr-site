@@ -51,7 +51,7 @@ export default function AboutPage() {
               Freedom Farms was born from a simple yet powerful idea: what if we could farm in a way that gives back more to the Earth than it takes? Nestled in the high-elevation mountains of Puerto Rico, our journey began in 2020 with a mission to address food security, ecological degradation, and economic opportunity.
             </p>
             <p>
-              We combine ancient agroforestry wisdom with modern sustainable technology to create a thriving ecosystem. Our farm is a mosaic of fruit trees, specialty crops, and native forestry, all working in synergy to create a carbon-negative sanctuary that produces delicious, healthy food.
+              We are at the beginning of our journey to combine ancient agroforestry wisdom with modern sustainable technology. Our plan is to cultivate a thriving ecosystem—a beautiful mosaic of fruit trees, specialty crops, and native forestry. All of these elements will work in synergy to create a carbon-negative sanctuary that produces delicious, healthy food.
             </p>
           </div>
         </section>
