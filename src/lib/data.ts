@@ -48,7 +48,7 @@ export const teamMembers = [
     name: 'Rick Pinney',
     role: 'Boardmember',
     image: 'team-member-2',
-    bio: 'Brings a wealth of experience to our board of directors.'
+    bio: 'Rick Pinney is a visionary in construction innovation and the second-generation leader of LRS Companies, a top-tier site-work and utility contracting firm. A pioneer in heavy civil automation, Rick was the first in New York to integrate GPS-guided equipment and tilt rotator automation into large-scale projects — transforming traditional earthwork into a high-precision, tech-driven operation. Under Rick’s leadership, LRS Companies has redefined productivity by dramatically reducing manpower requirements while increasing speed, safety, and accuracy on-site. His commitment to cutting-edge solutions has positioned LRS at the forefront of construction technology, delivering projects faster, smarter, and more profitably. At Freedom Farms, Rick brings decades of field-tested innovation and operational excellence, helping lay the groundwork — literally and strategically — for scalable, efficient infrastructure that supports long-term community growth.'
   },
   {
     name: 'Pat Jordon',
