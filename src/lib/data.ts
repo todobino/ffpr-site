@@ -113,6 +113,38 @@ export const events = [
   }
 ];
 
+export const poultryServicesStaff = {
+  title: 'Poultry Services Staff',
+  salary: '$15/hour - Double the industry standard!',
+  quote: "Join a movement that's changing the world, one egg at a time. We're not just farming – we're revolutionizing agriculture to heal the planet and nourish communities.",
+  mission: "We're building Puerto Rico's food sovereignty while creating a carbon-negative permaculture farm that serves as a global demonstration site. Our goal: prove that doing right by the planet is profitable.",
+  opportunity: [
+    "Scale: Starting with 3,000 hens, expanding to 100,000",
+    "Growth: Advance with us as we lead a global agricultural revolution",
+    "Impact: Your work directly contributes to healing the Earth"
+  ],
+  responsibilities: [
+    "Assembly: World-class mobile sheds from Quramo, Poland",
+    "Collection: Daily egg collection and quality control",
+    "Sanitation: Maintain pristine conditions",
+    "Monitoring: Remote monitoring of hen houses",
+    "Health Care: Monitor hen health, feed, and water systems",
+    "Logistics: Storage and delivery coordination"
+  ],
+  whoWeAreLookingFor: [
+    "Mission-driven individuals passionate about environmental change",
+    "Strong work ethic and accountability mindset",
+    "Team players ready to wear multiple hats",
+    "People who think like entrepreneurs",
+    "Those ready to be part of something revolutionary"
+  ],
+  whatMakesUsDifferent: "We're inspired by Tesla's innovation model - we're the \"Tesla of Agriculture.\" No bureaucracy, just results and revolutionary impact.",
+  location: "Jayuya, Puerto Rico (Beautiful mountains, fresh air, meaningful work)",
+  closingStatement: "If you're not here just for a paycheck, if you want to be part of something bigger than yourself, if you're ready to help heal the planet while building a profitable, sustainable future...",
+};
+
+
+// This is the old careers data, it is kept here for reference but is not used in the application.
 export const careers = [
     {
         title: 'Agroforestry Technician',

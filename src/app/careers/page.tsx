@@ -1,17 +1,14 @@
 
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
-import { careers } from "@/lib/data";
-import { MapPin, Clock, Check } from "lucide-react";
 import { getPlaceholderImage } from "@/lib/placeholder-images";
 import Image from "next/image";
+import { poultryServicesStaff } from "@/lib/data";
+import { Check, DollarSign, MapPin } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 
 export default function CareersPage() {
   const bannerImage = getPlaceholderImage("careers-banner");
+  const job = poultryServicesStaff;
 
   return (
     <>
@@ -39,46 +36,80 @@ export default function CareersPage() {
 
       <div className="container py-12 md:py-24">
         <div className="max-w-4xl mx-auto">
-          <Accordion type="single" collapsible className="w-full">
-            {careers.map((job) => (
-              <AccordionItem key={job.title} value={job.title}>
-                <AccordionTrigger className="text-left hover:no-underline">
-                  <div className="w-full">
-                    <h3 className="text-xl font-headline font-bold">{job.title}</h3>
-                    <div className="flex items-center gap-4 text-sm text-muted-foreground mt-2">
-                      <span className="flex items-center gap-1.5"><MapPin className="h-4 w-4" /> {job.location}</span>
-                      <span className="flex items-center gap-1.5"><Clock className="h-4 w-4" /> {job.type}</span>
-                    </div>
+          <Card className="overflow-hidden shadow-lg">
+            <CardHeader className="bg-secondary/30 p-8">
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                <div>
+                  <CardTitle className="font-headline text-3xl text-primary">{job.title}</CardTitle>
+                  <div className="flex items-center gap-6 text-muted-foreground mt-2">
+                    <span className="flex items-center gap-1.5"><MapPin className="h-4 w-4" /> {job.location}</span>
+                    <span className="flex items-center gap-1.5"><DollarSign className="h-4 w-4" /> {job.salary}</span>
                   </div>
-                </AccordionTrigger>
-                <AccordionContent className="space-y-6 pt-4">
-                  <p className="text-foreground/80">{job.description}</p>
-                  <div>
-                    <h4 className="font-bold mb-2">Responsibilities:</h4>
-                    <ul className="space-y-1 text-muted-foreground">
-                      {job.responsibilities.map((item, i) => (
-                        <li key={i} className="flex items-start gap-2">
-                          <Check className="h-4 w-4 mt-1 text-primary flex-shrink-0" />
-                          <span>{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  <div>
-                    <h4 className="font-bold mb-2">Qualifications:</h4>
-                    <ul className="space-y-1 text-muted-foreground">
-                      {job.qualifications.map((item, i) => (
-                        <li key={i} className="flex items-start gap-2">
-                          <Check className="h-4 w-4 mt-1 text-primary flex-shrink-0" />
-                          <span>{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
+                </div>
+                <Button size="lg" asChild>
+                  <a href="mailto:info@freedomfarmspr.com?subject=Application for Poultry Services Staff">Apply Now</a>
+                </Button>
+              </div>
+            </CardHeader>
+            <CardContent className="p-8 space-y-8">
+              <blockquote className="border-l-4 border-primary pl-4 italic text-lg text-foreground/80">
+                {job.quote}
+              </blockquote>
+              
+              <div className="space-y-6">
+                <div>
+                  <h3 className="font-headline text-xl font-bold text-primary mb-2">The Mission</h3>
+                  <p className="text-foreground/80">{job.mission}</p>
+                </div>
+                <div>
+                  <h3 className="font-headline text-xl font-bold text-primary mb-2">The Opportunity</h3>
+                  <ul className="space-y-2 text-muted-foreground">
+                    {job.opportunity.map((item, i) => (
+                      <li key={i} className="flex items-start gap-3">
+                        <Check className="h-5 w-5 mt-0.5 text-primary flex-shrink-0" />
+                        <span><span className="font-semibold text-foreground/90">{item.split(':')[0]}:</span>{item.split(':')[1]}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="font-headline text-xl font-bold text-primary mb-2">The Responsibilities</h3>
+                   <ul className="space-y-2 text-muted-foreground">
+                    {job.responsibilities.map((item, i) => (
+                      <li key={i} className="flex items-start gap-3">
+                        <Check className="h-5 w-5 mt-0.5 text-primary flex-shrink-0" />
+                        <span><span className="font-semibold text-foreground/90">{item.split(':')[0]}:</span>{item.split(':')[1]}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="font-headline text-xl font-bold text-primary mb-2">Who We're Looking For</h3>
+                   <ul className="space-y-2 text-muted-foreground">
+                    {job.whoWeAreLookingFor.map((item, i) => (
+                      <li key={i} className="flex items-start gap-3">
+                        <Check className="h-5 w-5 mt-0.5 text-primary flex-shrink-0" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                 <div>
+                  <h3 className="font-headline text-xl font-bold text-primary mb-2">What Makes Us Different</h3>
+                  <p className="text-foreground/80">{job.whatMakesUsDifferent}</p>
+                </div>
+              </div>
+
+              <div className="text-center bg-primary/10 p-6 rounded-lg">
+                <h3 className="font-headline text-2xl font-bold mb-2">Ready to Change The World?</h3>
+                <p className="text-muted-foreground mb-4">{job.closingStatement}</p>
+                <Button size="lg" asChild>
+                  <a href="mailto:info@freedomfarmspr.com?subject=Application for Poultry Services Staff">Apply Now</a>
+                </Button>
+              </div>
+
+            </CardContent>
+          </Card>
         </div>
       </div>
     </>
