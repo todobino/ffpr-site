@@ -20,22 +20,76 @@ export const features = [
 
 export const teamMembers = [
   {
-    name: 'Dr. Elena Vance',
-    role: 'Founder & CEO',
+    name: 'Mike Maloney',
+    role: 'Board Chair',
     image: 'team-member-1',
-    bio: 'With a PhD in Environmental Science, Elena founded Freedom Farms to create a scalable model for profitable, carbon-negative agriculture.'
+    bio: 'Experienced leader guiding our strategic direction.'
   },
   {
-    name: 'Marco Diaz',
-    role: 'Lead Agriculturist',
+    name: 'Robert Helms',
+    role: 'Boardmember',
     image: 'team-member-2',
-    bio: 'Marco brings over 20 years of experience in tropical agroecology, managing our diverse crop and forestry systems.'
+    bio: 'Provides valuable insights and oversight for the board.'
   },
   {
-    name: 'Sofia Reyes',
-    role: 'Community & Investment Manager',
+    name: 'Derek Speigner',
+    role: 'Boardmember',
     image: 'team-member-3',
-    bio: 'Sofia connects the farm with the local community and our investment partners, ensuring our mission thrives.'
+    bio: 'Contributes to our long-term vision and governance.'
+  },
+  {
+    name: 'Robby Marsh',
+    role: 'Boardmember',
+    image: 'team-member-1',
+    bio: 'Supports our mission through strategic board participation.'
+  },
+  {
+    name: 'Rick Pinney',
+    role: 'Boardmember',
+    image: 'team-member-2',
+    bio: 'Brings a wealth of experience to our board of directors.'
+  },
+  {
+    name: 'Pat Jordon',
+    role: 'Boardmember',
+    image: 'team-member-3',
+    bio: 'Helps shape the future of Freedom Farms.'
+  },
+  {
+    name: 'Dan Rubock',
+    role: 'Marketing/Media',
+    image: 'team-member-1',
+    bio: 'Leads our marketing and media outreach efforts.'
+  },
+  {
+    name: 'Pedro Prado',
+    role: 'Executive',
+    image: 'team-member-2',
+    bio: 'Part of the executive team driving our mission forward.'
+  },
+  {
+    name: 'Philip W. Sarsons',
+    role: 'Executive',
+    image: 'team-member-3',
+    bio: 'Executive team member focused on operational excellence.'
+  },
+  {
+    name: 'Nikola Spassov',
+    role: 'Farm Manager',
+    image: 'team-member-1',
+    bio: 'Manages the day-to-day operations of our farm.'
+  },
+  {
+    name: 'Brian Kimble',
+    role: 'Executive',
+    image: 'team-member-2',
+    bio: 'Key member of our executive leadership team.'
+  },
+  {
+    name: 'James McCandless',
+    role: 'Tax Attorney',
+    image: 'team-member-3',
+    bio: 'Provides expert legal and tax guidance.'
   }
 ];
 
