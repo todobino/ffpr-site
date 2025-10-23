@@ -69,12 +69,6 @@ export const teamMembers = [
     bio: 'Pedro Prado is a farmer specialized in raising pasture-raised animals roaming free on grass, such as laying hens, beef cattle, pigs, and sheep. He is a passionate advocate for regenerative agriculture, blending his expertise in industrial microbiology with sustainable livestock practices. With a Bachelor’s degree in Industrial Microbiology from the University of Puerto Rico and a scientific career that includes pioneering research in bioremediation for the U.S. Department of Energy, Pedro has tirelessly worked to improve soil health and animal welfare with the goal of producing nutrient-dense and healthy food. His training under the guidance of farmers like Joel Salatin and Greg Judy, combined with his current role as Director of Operations at Finca Pastoreo, has established him as a prominent figure in regenerative agriculture in Puerto Rico. His  innovative approach to holistic pasture management and ethical livestock production reflects his commitment to sustainability.'
   },
   {
-    name: 'K. L.',
-    role: 'Executive',
-    image: 'team-member-3',
-    bio: 'Since the initial sharing of the vision of Freedom Farms K. has been shaping and transforming that project vision into a real-life working company. With over 20 years K. has lead in executive roles in energy, wealth management, investment banking, and the insurance industry. As founder and director of two Swiss companies, K. has proven to boost bottom line net-profits for businesses by designing high scalable target operating models underpinned by top class technology integrations including data analytics, machine learning, ecommerce and the open source protocols like bitcoin. His career journey has allowed him to lead projects in Ireland, Switzerland as well as the United States.'
-  },
-  {
     name: 'Philip W. Sarsons',
     role: 'Executive',
     image: 'team-member-3',
