@@ -1,12 +1,8 @@
-import Image from "next/image";
 import Link from "next/link";
 import { Button } from "../ui/button";
-import { getPlaceholderImage } from "@/lib/placeholder-images";
 import { CheckCircle } from "lucide-react";
 
 export function Investment() {
-  const investmentImage = getPlaceholderImage("investment-image");
-
   return (
     <section className="bg-secondary/50">
       <div className="container grid grid-cols-1 md:grid-cols-2 gap-12 items-center py-12 md:py-24">
@@ -35,17 +31,14 @@ export function Investment() {
             <Link href="/contact">Request Information</Link>
           </Button>
         </div>
-        <div className="h-full w-full">
-          {investmentImage && (
-            <Image
-              src={investmentImage.imageUrl}
-              alt={investmentImage.description}
-              data-ai-hint={investmentImage.imageHint}
-              width={800}
-              height={600}
-              className="rounded-lg shadow-lg object-cover w-full h-full"
-            />
-          )}
+        <div className="aspect-video w-full">
+          <iframe
+            className="w-full h-full rounded-lg shadow-lg"
+            src="https://www.youtube.com/embed/K1TezYYwmZY"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
         </div>
       </div>
     </section>
