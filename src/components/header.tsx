@@ -34,17 +34,17 @@ export function Header() {
                 <div className="p-4">
                   <Logo />
                 </div>
-                <div className="flex flex-col space-y-4 mt-4">
+                <div className="flex flex-col space-y-2 p-2">
                   {siteConfig.navItems.map((item) => (
                     <Link
                       key={item.href}
                       href={item.href}
                       onClick={() => setMobileMenuOpen(false)}
                       className={cn(
-                        "text-lg font-medium font-headline px-4 py-2 rounded-md",
+                        "text-lg font-medium font-headline px-4 py-2 rounded-full",
                         pathname === item.href
-                          ? "text-primary bg-primary/10"
-                          : "text-muted-foreground hover:bg-muted"
+                          ? "bg-primary text-primary-foreground"
+                          : "text-muted-foreground hover:bg-primary/10 hover:text-primary"
                       )}
                     >
                       {item.title}
@@ -54,16 +54,16 @@ export function Header() {
               </SheetContent>
             </Sheet>
           </div>
-          <nav className="hidden font-headline md:flex md:gap-6">
+          <nav className="hidden font-headline md:flex md:gap-1">
             {siteConfig.navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  "transition-colors hover:text-foreground/80",
+                  "transition-colors px-4 py-2 rounded-full text-sm",
                   pathname === item.href
-                    ? "text-foreground"
-                    : "text-foreground/60"
+                    ? "bg-primary text-primary-foreground"
+                    : "text-foreground/60 hover:bg-primary/10 hover:text-primary"
                 )}
               >
                 {item.title}
