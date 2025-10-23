@@ -16,7 +16,7 @@ export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
 
   return (
-    <header className="fixed top-4 left-1/2 z-50 -translate-x-1/2 w-full max-w-2xl px-4">
+    <header className="fixed top-4 left-1/2 z-50 -translate-x-1/2 w-full max-w-3xl px-4">
       <div className="rounded-full border border-border/40 bg-white shadow-md">
         <div className="flex h-14 items-center justify-between px-4">
           <div className="mr-4 flex">

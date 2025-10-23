@@ -14,6 +14,7 @@ export const siteConfig: SiteConfig = {
   name: "Freedom Farms",
   description: "Saving the Planet Profitably.",
   navItems: [
+    { title: "Home", href: "/" },
     { title: "About", href: "/about" },
     { title: "Events", href: "/events" },
     { title: "Careers", href: "/careers" },
