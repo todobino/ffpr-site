@@ -26,7 +26,7 @@ export function Hero() {
             <Link href="/about">Learn More</Link>
           </Button>
           <Button asChild size="lg" variant="secondary">
-            <Link href="/contact">Invest Now</Link>
+            <Link href="/contact">Get in Touch</Link>
           </Button>
         </div>
       </div>
