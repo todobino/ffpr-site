@@ -29,7 +29,7 @@ export const teamMembers = [
     name: 'Robert Helms',
     role: 'Boardmember',
     image: 'team-member-2',
-    bio: 'Provides valuable insights and oversight for the board.'
+    bio: 'With investment and development experience in nine states and six countries, Robert’s past and current projects are valued at over $800 Million. A passionate teacher, he hosts the nationally syndicated radio show The Real Estate Guys™, now in its twenty-ninth year of broadcast. The podcast version of the show is one of the most downloaded podcasts on real estate and is heard in more than 190 countries.'
   },
   {
     name: 'Derek Speigner',
