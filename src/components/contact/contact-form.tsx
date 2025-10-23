@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useFormState, useFormStatus } from "react-dom";
@@ -45,7 +46,7 @@ export function ContactForm() {
   }, [state, toast]);
 
   return (
-    <Card>
+    <Card className="bg-background shadow-lg">
       <CardHeader>
         <CardTitle className="font-headline text-2xl">Send us a message</CardTitle>
       </CardHeader>
