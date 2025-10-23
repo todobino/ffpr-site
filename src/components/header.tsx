@@ -17,7 +17,7 @@ export function Header() {
 
   return (
     <div className="sticky top-4 z-50 flex justify-center">
-      <header className="w-full max-w-lg rounded-full border border-border/40 bg-background/95 shadow-md backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <header className="w-full max-w-2xl rounded-full border border-border/40 bg-background/95 shadow-md backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-14 items-center justify-between">
           <div className="mr-4 flex">
             <Logo />
