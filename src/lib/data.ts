@@ -42,7 +42,7 @@ export const teamMembers = [
     name: 'Robby Marsh',
     role: 'Boardmember',
     image: 'team-member-1',
-    bio: 'Supports our mission through strategic board participation.'
+    bio: 'President & CEO of JH Boyd Enterprises Inc.; Co-Founder, Principal of Arise Equity Management and Affiliates; Founder of Boyd Legacy; and other ventures. With a booming portfolio of commercial real estate and energy investments, Robby Marsh is a renowned leader in financial resilience and wealth generation; capital project investment, development and execution; and energy independence and stability. During a decade of Global Projects ExxonMobil and over a decade in investment real estate, Robby has been a key leader in over $12B of funds deployed. His network extends from the oil field to Capitol Hill, retail investors to midcap investment funds, field construction and operations to the executive board room.'
   },
   {
     name: 'Rick Pinney',
