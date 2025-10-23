@@ -62,7 +62,7 @@ export default function AboutPage() {
               const isReversed = index % 2 !== 0;
 
               return (
-                <Card key={member.name} className="bg-secondary/50 overflow-hidden border border-primary shadow-lg">
+                <Card key={member.name} className="bg-secondary/50 overflow-hidden shadow-md rounded-2xl">
                   <div className={cn("grid grid-cols-1 md:grid-cols-5 items-center gap-8 md:gap-12", isReversed ? "md:grid-flow-col-dense" : "")}>
                     <div className={cn("w-full p-8 md:p-0", isReversed ? "md:col-start-4 md:col-span-2" : "md:col-span-2")}>
                       {memberImage && (
@@ -72,7 +72,7 @@ export default function AboutPage() {
                             alt={member.name}
                             data-ai-hint={memberImage.imageHint}
                             fill
-                            className="object-cover rounded-lg"
+                            className="object-cover rounded-2xl"
                           />
                         </div>
                       )}
