@@ -1,5 +1,6 @@
 import { siteConfig } from "@/config/site";
 import { Logo } from "./logo";
+import Link from "next/link";
 
 export function Footer() {
   return (
@@ -13,7 +14,7 @@ export function Footer() {
         </div>
         <div>
           <p className="text-xs text-muted-foreground">
-            This website is for informational purposes only and does not constitute an offer to sell or a solicitation of an offer to buy any securities. Investments referenced herein are offered pursuant to Rule 506(c) of Regulation D and are available only to verified accredited investors. All investments involve risk, including the loss of principal. Past performance is not indicative of future results. Forward-looking statements are not guarantees of future outcomes. Offers may only be made through official offering documents. Please consult your legal, tax, or financial advisor before making any investment decision.
+            This website is for informational purposes only and does not constitute an offer to sell or a solicitation of an offer to buy any securities. Investments referenced herein are offered pursuant to Rule 506(c) of Regulation D and are available only to verified accredited investors. All investments involve risk, including the loss of principal. Past performance is not indicative of future results. Forward-looking statements are not guarantees of future outcomes. Offers may only be made through official offering documents. Please consult your legal, tax, or financial advisor before making any investment decision. See additional risks, disclosures, and information on the <Link href="/disclosures" className="underline hover:text-primary">Disclosures</Link> page.
           </p>
         </div>
       </div>
