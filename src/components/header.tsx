@@ -39,7 +39,7 @@ export function Header() {
                       href={item.href}
                       onClick={() => setMobileMenuOpen(false)}
                       className={cn(
-                        "text-lg font-medium",
+                        "text-lg font-medium font-headline",
                         pathname === item.href
                           ? "text-primary"
                           : "text-muted-foreground"
@@ -52,7 +52,7 @@ export function Header() {
               </SheetContent>
             </Sheet>
           </div>
-          <nav className="hidden md:flex md:gap-6">
+          <nav className="hidden font-headline md:flex md:gap-6">
             {siteConfig.navItems.map((item) => (
               <Link
                 key={item.href}
