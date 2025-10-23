@@ -32,9 +32,6 @@ export function Investment() {
               Become part of a forward-thinking community.
             </li>
           </ul>
-          <Button asChild size="lg" className="mt-4">
-            <Link href="/contact">Request Information</Link>
-          </Button>
         </div>
         <div className="aspect-video w-full relative">
             {investmentImage && (
