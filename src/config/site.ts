@@ -1,3 +1,4 @@
+
 export type NavItem = {
   title: string;
   href: string;
@@ -19,6 +20,5 @@ export const siteConfig: SiteConfig = {
     { title: "Events", href: "/events" },
     { title: "Careers", href: "/careers" },
     { title: "Contact", href: "/contact" },
-    { title: "Disclosures", href: "/disclosures" },
   ],
 };
