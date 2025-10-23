@@ -21,17 +21,15 @@ export default function AboutPage() {
       </header>
 
       <section className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-12 md:mb-24">
-        {aboutImage && (
-          <div className="w-full h-80 md:h-full relative">
-            <Image
-              src={aboutImage.imageUrl}
-              alt={aboutImage.description}
-              data-ai-hint={aboutImage.imageHint}
-              fill
-              className="rounded-lg shadow-lg object-cover"
-            />
-          </div>
-        )}
+        <div className="aspect-video w-full">
+            <iframe
+              className="w-full h-full rounded-lg shadow-lg"
+              src="https://www.youtube.com/embed/K1TezYYwmZY"
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+        </div>
         <div className="space-y-6 text-lg text-foreground/90">
           <h2 className="text-2xl md:text-3xl font-headline font-bold text-primary">From Vision to Verdant Fields</h2>
           <p>
@@ -57,7 +55,7 @@ export default function AboutPage() {
                 <div className={cn("grid grid-cols-1 md:grid-cols-5 items-center gap-8 md:gap-12", isReversed ? "md:grid-flow-col-dense" : "")}>
                   <div className={cn("w-full p-8 md:p-0", isReversed ? "md:col-start-4 md:col-span-2" : "md:col-span-2")}>
                     {memberImage && (
-                      <div className="aspect-square relative w-full max-w-sm mx-auto md:max-w-none">
+                      <div className="aspect-square relative w-full max-w-sm mx-auto md:max-w-none p-4">
                         <Image
                           src={memberImage.imageUrl}
                           alt={member.name}
