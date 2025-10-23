@@ -6,7 +6,7 @@ export function Mission() {
           Saving the Planet Profitably
         </h2>
         <p className="mt-4 max-w-3xl mx-auto text-lg text-foreground/80">
-          Freedom Farms is built on the principle that ecological restoration and financial success can go hand-in-hand. We are pioneering a new model of agriculture that enriches the land, empowers the local community, and delivers sustainable returns for our partners.
+          Amazing breakthroughs in farming techniques are our great hope to reverse the environmental catastrophe that the world currently faces. For decades, modern farming has been a major source of chemical pollution and greenhouse-gas emissions. We believe that Freedom Farms can be a shining example to the world of new farming methods that not only sequester CO2, but also eliminate herbicides, pesticides and chemical fertilizers. All while creating healthier, tastier food.
         </p>
       </div>
     </section>
