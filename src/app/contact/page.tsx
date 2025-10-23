@@ -8,7 +8,7 @@ export default function ContactPage() {
   const bannerImage = getPlaceholderImage("contact-banner");
   return (
     <>
-      <section className="relative h-72 w-full flex items-center justify-center text-white">
+      <section className="relative h-96 w-full flex items-center justify-center text-white">
         {bannerImage && (
           <Image
             src={bannerImage.imageUrl}

@@ -12,7 +12,7 @@ export default function AboutPage() {
 
   return (
     <>
-      <section className="relative h-72 w-full flex items-center justify-center text-white">
+      <section className="relative h-96 w-full flex items-center justify-center text-white">
         {aboutBanner && (
           <Image
             src={aboutBanner.imageUrl}
