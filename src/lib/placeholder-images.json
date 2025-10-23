@@ -20,7 +20,7 @@
     },
     {
       "id": "event-1",
-      "description": "A group of people at a sophisticated outdoor gathering, discussing investment opportunities in a beautiful, natural setting.",
+      "description": "An exclusive, sophisticated gathering for investors at an outdoor, scenic farm location.",
       "imageUrl": "https://images.unsplash.com/photo-1639442233127-f8866b35b523?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y29tbXVuaXR5JTIwZ2FyZGVuJTIwZXZlbnR8ZW58MHx8fHwxNzYxMjMwOTIwfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "investor meeting outdoors"
     },
@@ -47,6 +47,12 @@
       "description": "Professional headshot of a person, the community manager.",
       "imageUrl": "https://images.unsplash.com/photo-1655249493799-9cee4fe983bb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwcm9mZXNzaW9uYWwlMjBoZWFkc2hvdCUyMHBlcnNvbnxlbnwwfHx8fDE3NjEyMzA5MjB8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "professional headshot person"
+    },
+    {
+      "id": "puerto-rico-advantage",
+      "description": "A stunning view of the mountains in central Puerto Rico, showcasing the high-elevation landscape.",
+      "imageUrl": "https://images.unsplash.com/photo-1615902224255-758953183d24?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwdWVydG8lMjByaWNvJTIwbW91bnRhaW5zfGVufDB8fHx8MTc2MjEwMTQ3NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "puerto rico mountains"
     }
   ]
 }
