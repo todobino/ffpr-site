@@ -7,7 +7,7 @@ export function Features() {
     <section id="features" className="container py-12 md:py-24">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {features.map((feature) => (
-          <Card key={feature.title} className="text-center bg-white shadow-lg drop-shadow-md">
+          <Card key={feature.title} className="text-center bg-white shadow-md">
             <CardHeader>
               <div className="flex justify-center mb-4">
                 <div className="p-4 rounded-full bg-primary/10 text-primary">
