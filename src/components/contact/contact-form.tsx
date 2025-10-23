@@ -1,7 +1,7 @@
 
 "use client";
 
-import { useFormState, useFormStatus } from "react-dom";
+import { useActionState, useFormStatus } from "react";
 import { useEffect } from "react";
 import { submitContactForm } from "@/app/actions";
 import { useToast } from "@/hooks/use-toast";
@@ -27,7 +27,7 @@ function SubmitButton() {
 }
 
 export function ContactForm() {
-  const [state, formAction] = useFormState(submitContactForm, initialState);
+  const [state, formAction] = useActionState(submitContactForm, initialState);
   const { toast } = useToast();
 
   useEffect(() => {
@@ -46,7 +46,7 @@ export function ContactForm() {
   }, [state, toast]);
 
   return (
-    <Card className="bg-background shadow-lg">
+    <Card className="bg-white shadow-lg">
       <CardHeader>
         <CardTitle className="font-headline text-2xl">Send us a message</CardTitle>
       </CardHeader>
