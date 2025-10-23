@@ -16,12 +16,12 @@ export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-14 max-w-screen-2xl items-center">
-        <div className="mr-4 hidden md:flex">
-          <Logo />
-        </div>
-        <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">
+    <div className="sticky top-4 z-50 flex justify-center">
+      <header className="w-full max-w-lg rounded-full border border-border/40 bg-background/95 shadow-md backdrop-blur supports-[backdrop-filter]:bg-background/60">
+        <div className="container flex h-14 items-center justify-between">
+          <div className="mr-4 hidden md:flex">
+            <Logo />
+          </div>
           <div className="md:hidden">
             <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
               <SheetTrigger asChild>
@@ -51,6 +51,9 @@ export function Header() {
                 </div>
               </SheetContent>
             </Sheet>
+            <div className="flex-1 justify-start">
+               <Logo />
+            </div>
           </div>
           <nav className="hidden font-headline md:flex md:gap-6">
             {siteConfig.navItems.map((item) => (
@@ -69,7 +72,7 @@ export function Header() {
             ))}
           </nav>
         </div>
-      </div>
-    </header>
+      </header>
+    </div>
   );
 }
