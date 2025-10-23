@@ -7,30 +7,6 @@
       "imageHint": "puerto rico coffee farm"
     },
     {
-      "id": "about-banner",
-      "description": "Lush green mountains in Puerto Rico.",
-      "imageUrl": "https://images.unsplash.com/photo-1579933522231-155164726532?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhY3JlcyUyMG9mJTIwbGFuZHxlbnwwfHx8fDE3NjE5MjUyODF8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "puerto rico mountains"
-    },
-    {
-      "id": "careers-banner",
-      "description": "A winding road through a tropical forest.",
-      "imageUrl": "https://images.unsplash.com/photo-1522206233983-84c11ab8195d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwdWVydG8lMjByaWNvJTIwcm9hZHxlbnwwfHx8fDE3NjE5MjYxNDV8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "puerto rico road"
-    },
-    {
-      "id": "contact-banner",
-      "description": "Sunlight filtering through palm trees.",
-      "imageUrl": "https://images.unsplash.com/photo-1520176985431-4a87353f0e0a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwdWVydG8lMjByaWNvJTIwcGFsbSUyMHRyZWVzfGVufDB8fHx8MTc2MTkyNjE5Nnww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "palm trees"
-    },
-    {
-      "id": "events-banner",
-      "description": "A vibrant sunset over a tropical landscape.",
-      "imageUrl": "https://images.unsplash.com/photo-1538332576219-8350bac408a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwdWVydG8lMjByaWNvJTIwc3Vuc2V0fGVufDB8fHx8MTc2MTkyNjI4Nnww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "puerto rico sunset"
-    },
-    {
       "id": "about-us-main",
       "description": "A group of diverse farm workers smiling and holding fresh produce.",
       "imageUrl": "https://images.unsplash.com/photo-1758524054544-577c87b046f4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmYXJtJTIwd29ya2VycyUyMHNtaWxpbmd8ZW58MHx8fHwxNzYxMjMwOTIwfDA&ixlib=rb-4.1.0&q=80&w=1080",

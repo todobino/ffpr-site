@@ -8,21 +8,17 @@ import { cn } from "@/lib/utils";
 
 export default function AboutPage() {
   const aboutImage = getPlaceholderImage("about-us-main");
-  const aboutBanner = getPlaceholderImage("about-banner");
 
   return (
     <>
       <section className="relative h-96 w-full flex items-center justify-center text-white">
-        {aboutBanner && (
-          <Image
-            src={aboutBanner.imageUrl}
-            alt={aboutBanner.description}
-            data-ai-hint={aboutBanner.imageHint}
-            fill
-            className="object-cover"
-            priority
-          />
-        )}
+        <Image
+          src="/site-header-banner.jpg"
+          alt="Freedom Farms banner"
+          fill
+          className="object-cover"
+          priority
+        />
         <div className="absolute inset-0 bg-black/50" />
         <header className="relative z-10 text-center px-4">
           <h1 className="text-4xl md:text-5xl font-headline font-bold text-white tracking-tight">

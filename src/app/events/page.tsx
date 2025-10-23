@@ -7,23 +7,19 @@ import { Clock, MapPin, Briefcase } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function EventsPage() {
-  const bannerImage = getPlaceholderImage("events-banner");
   const event = events[0]; // There is only one event now
   const eventImage = getPlaceholderImage(event.image);
 
   return (
     <>
       <section className="relative h-96 w-full flex items-center justify-center text-white">
-        {bannerImage && (
-          <Image
-            src={bannerImage.imageUrl}
-            alt={bannerImage.description}
-            data-ai-hint={bannerImage.imageHint}
-            fill
-            className="object-cover"
-            priority
-          />
-        )}
+        <Image
+          src="/site-header-banner.jpg"
+          alt="Freedom Farms banner"
+          fill
+          className="object-cover"
+          priority
+        />
         <div className="absolute inset-0 bg-black/50" />
         <header className="relative z-10 text-center px-4">
           <h1 className="text-4xl md:text-5xl font-headline font-bold text-white tracking-tight">
