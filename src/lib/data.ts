@@ -139,7 +139,7 @@ export const poultryServicesStaff = {
     "Those ready to be part of something revolutionary"
   ],
   whatMakesUsDifferent: "We're inspired by Tesla's innovation model - we're the \"Tesla of Agriculture.\" No bureaucracy, just results and revolutionary impact.",
-  location: "Jayuya, Puerto Rico (Beautiful mountains, fresh air, meaningful work)",
+  location: "Jayuya, Puerto Rico",
   closingStatement: "If you're not here just for a paycheck, if you want to be part of something bigger than yourself, if you're ready to help heal the planet while building a profitable, sustainable future...",
 };
 
