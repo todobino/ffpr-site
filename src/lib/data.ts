@@ -54,7 +54,7 @@ export const teamMembers = [
     name: 'Pat Jordon',
     role: 'Boardmember',
     image: 'team-member-3',
-    bio: 'Helps shape the future of Freedom Farms.'
+    bio: "With 35 years of commercial construction management, and steady supervision of over 100 employees, Mr. Jordon’s reputation has been established with consistent on-time deliveries of contracts, and completions arriving at under-bid prices. Pat overcomes the natural obstacles inherent to commercial construction efficiently, including: labor disputes, supply chains disruptions, and managing highly-complex schedules. Freedom Farms will come with its own unique challenges, but his prior build-outs of Hospitals', schools, and high-rise hotels, has the project in good hands. Pat is very proud to join this team, to share in the privilege of helping the people of PURTO RICO live more affordably."
   },
   {
     name: 'Dan Rubock',
