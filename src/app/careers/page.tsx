@@ -47,7 +47,7 @@ export default function CareersPage() {
                   </div>
                 </div>
                 <Button size="lg" asChild>
-                  <a href="mailto:info@freedomfarmspr.com?subject=Application for Poultry Services Staff">Apply Now</a>
+                  <a href="https://www.jotform.com/form/252454857611259" target="_blank" rel="noopener noreferrer">Apply Now</a>
                 </Button>
               </div>
             </CardHeader>
@@ -104,7 +104,7 @@ export default function CareersPage() {
                 <h3 className="font-headline text-2xl font-bold mb-2">Ready to Change The World?</h3>
                 <p className="text-muted-foreground mb-4">{job.closingStatement}</p>
                 <Button size="lg" asChild>
-                  <a href="mailto:info@freedomfarmspr.com?subject=Application for Poultry Services Staff">Apply Now</a>
+                  <a href="https://www.jotform.com/form/252454857611259" target="_blank" rel="noopener noreferrer">Apply Now</a>
                 </Button>
               </div>
 
