@@ -41,12 +41,22 @@ export default function CareersPage() {
               <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                 <div>
                   <CardTitle className="font-headline text-3xl text-primary">{job.title}</CardTitle>
-                  <div className="flex items-center gap-6 text-muted-foreground mt-2">
-                    <span className="flex items-center gap-1.5"><MapPin className="h-4 w-4" /> {job.location}</span>
-                    <span className="flex items-center gap-1.5"><DollarSign className="h-4 w-4" /> {job.salary}</span>
+                  <div className="flex flex-wrap items-center gap-6 text-muted-foreground mt-2">
+                    <span className="flex items-center gap-2">
+                      <div className="p-2 bg-primary/10 rounded-full">
+                        <MapPin className="h-4 w-4 text-primary" />
+                      </div>
+                      {job.location}
+                    </span>
+                    <span className="flex items-center gap-2">
+                      <div className="p-2 bg-primary/10 rounded-full">
+                        <DollarSign className="h-4 w-4 text-primary" />
+                      </div>
+                      {job.salary}
+                    </span>
                   </div>
                 </div>
-                <Button size="lg" asChild>
+                <Button size="lg" asChild className="flex-shrink-0">
                   <a href="https://www.jotform.com/form/252454857611259" target="_blank" rel="noopener noreferrer">Apply Now</a>
                 </Button>
               </div>
