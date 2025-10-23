@@ -1,8 +1,25 @@
 
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 import { ContactForm } from "@/components/contact/contact-form";
 import { getPlaceholderImage } from "@/lib/placeholder-images";
 import Image from "next/image";
+
+const TelegramIcon = (props: React.SVGProps<SVGSVGElement>) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      {...props}
+    >
+      <path d="m15 10-4 4 6 6 4-16-18 7 4 2 2 6 3-4" />
+    </svg>
+  );
 
 export default function ContactPage() {
   const bannerImage = getPlaceholderImage("contact-banner");
@@ -47,13 +64,13 @@ export default function ContactPage() {
             </div>
             <div className="flex items-start gap-4">
               <div className="p-3 bg-primary/10 rounded-full text-primary">
-                <Phone className="h-6 w-6" />
+                <TelegramIcon className="h-6 w-6" />
               </div>
               <div>
-                <h3 className="text-xl font-bold font-headline">Phone</h3>
-                <p className="text-muted-foreground">Available during business hours (9am-5pm AST).</p>
-                <a href="tel:+17875550101" className="text-primary hover:underline">
-                  +1 (787) 555-0101
+                <h3 className="text-xl font-bold font-headline">Telegram Channel</h3>
+                <p className="text-muted-foreground">Join our community for updates and discussions.</p>
+                <a href="https://t.me/+LYu0wiiutnA2MGZh" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                  Freedom Farms Community
                 </a>
               </div>
             </div>
