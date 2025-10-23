@@ -40,8 +40,8 @@ export default function ContactPage() {
               <div>
                 <h3 className="text-xl font-bold font-headline">Email</h3>
                 <p className="text-muted-foreground">For general inquiries and investment information.</p>
-                <a href="mailto:contact@freedomfarms.pr" className="text-primary hover:underline">
-                  contact@freedomfarms.pr
+                <a href="mailto:info@freedomfarmspr.com" className="text-primary hover:underline">
+                  info@freedomfarmspr.com
                 </a>
               </div>
             </div>
