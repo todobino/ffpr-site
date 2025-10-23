@@ -96,20 +96,12 @@ export const teamMembers = [
 
 export const events = [
   {
-    title: 'Farm-to-Table Dinner',
-    date: 'Saturday, August 17, 2024',
-    time: '6:00 PM - 9:00 PM',
-    description: 'An exclusive dining experience featuring a multi-course meal prepared with the freshest ingredients from our farm.',
+    title: 'Investor On-Site Weekend',
+    date: 'Feb/March 2025',
+    time: 'A Catered Weekend Experience',
+    description: 'An exclusive opportunity for accredited investors to explore private placement opportunities at Freedom Farms. Enjoy a fully catered weekend with farm-fresh food, craft drinks, stunning mountain views, and a firsthand look at our carbon-negative enterprise.',
     image: 'event-1',
-    icon: Calendar
-  },
-  {
-    title: 'Volunteer Day & Composting Workshop',
-    date: 'Saturday, September 7, 2024',
-    time: '9:00 AM - 1:00 PM',
-    description: 'Join us for a day of hands-on learning and contribution. Learn the basics of large-scale composting and help us tend to our crops.',
-    image: 'event-2',
-    icon: Users
+    icon: Briefcase
   }
 ];
 

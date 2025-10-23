@@ -27,7 +27,7 @@
     {
       "id": "events-banner",
       "description": "A vibrant sunset over a tropical landscape.",
-      "imageUrl": "https://images.unsplash.com/photo-1538332576219-8350bac408a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwdWVydG8lMjByaWNvJTIwc3Vuc2V0fGVufDB8fHx8MTc2MTkyNjI4Nnww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1538332576219-8350bac408a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwdWVydG8lMjByaWNvJTIwc3Vuc2V0fGVufDB8fHx8MTc2MTkyNjI4Nnww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "puerto rico sunset"
     },
     {
@@ -39,19 +39,19 @@
     {
       "id": "investment-image",
       "description": "Sun shining on a field of growing crops, symbolizing growth and profitability.",
-      "imageUrl": "https://images.unsplash.com/photo-1663168736720-caf55d92d3bf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y3JvcHMlMjBzdW5yaXNlfGVufDB8fHx8MTc2MTIzMDkyMHww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1663168736720-caf55d92d3bf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y3JvcHMlMjBzdW5yaXNlfGVufDB8fHx8MTc2MTIzMDkyMHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "crops sunrise"
     },
     {
       "id": "event-1",
-      "description": "People gathered at an outdoor farm-to-table dinner event.",
-      "imageUrl": "https://images.unsplash.com/photo-1639442233127-f8866b35b523?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y29tbXVuaXR5JTIwZ2FyZGVuJTIwZXZlbnR8ZW58MHx8fHwxNzYxMjMwOTIwfDA&ixlib-rb-4.1.0&q=80&w=1080",
-      "imageHint": "community garden event"
+      "description": "A group of people at a sophisticated outdoor gathering, discussing investment opportunities in a beautiful, natural setting.",
+      "imageUrl": "https://images.unsplash.com/photo-1639442233127-f8866b35b523?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y29tbXVuaXR5JTIwZ2FyZGVuJTIwZXZlbnR8ZW58MHx8fHwxNzYxMjMwOTIwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "investor meeting outdoors"
     },
     {
       "id": "event-2",
       "description": "A workshop on composting being held at the farm.",
-      "imageUrl": "https://images.unsplash.com/photo-1580404417320-56170f5897f6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxmYXJtJTIwd29ya3Nob3B8ZW58MHx8fHwxNzYxMjMwOTIwfDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1580404417320-56170f5897f6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxmYXJtJTIwd29ya3Nob3B8ZW58MHx8fHwxNzYxMjMwOTIwfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "farm workshop"
     },
     {
@@ -63,13 +63,13 @@
     {
       "id": "team-member-2",
       "description": "Professional headshot of a man, the lead agriculturist.",
-      "imageUrl": "https://images.unsplash.com/photo-1672685667592-0392f458f46f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBoZWFkc2hvdCUyMG1hbnxlbnwwfHx8fDE3NjEyMzA5MjB8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1672685667592-0392f458f46f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBoZWFkc2hvdCUyMG1hbnxlbnwwfHx8fDE3NjEyMzA5MjB8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "professional headshot man"
     },
     {
       "id": "team-member-3",
       "description": "Professional headshot of a person, the community manager.",
-      "imageUrl": "https://images.unsplash.com/photo-1655249493799-9cee4fe983bb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwcm9mZXNzaW9uYWwlMjBoZWFkc2hvdCUyMHBlcnNvbnxlbnwwfHx8fDE3NjEyMzA5MjB8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1655249493799-9cee4fe983bb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwcm9mZXNzaW9uYWwlMjBoZWFkc2hvdCUyMHBlcnNvbnxlbnwwfHx8fDE3NjEyMzA5MjB8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "professional headshot person"
     }
   ]
