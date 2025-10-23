@@ -16,7 +16,7 @@ export function GlobalImpact() {
             Once achieved, farmers everywhere will adopt these techniques simply because they are more profitable. That is how we change the world for the better.
         </p>
         <Button asChild size="lg" className="mt-8">
-            <Link href="/about">Discover Our Mission</Link>
+            <Link href="/about">Meet the Team</Link>
         </Button>
       </div>
     </section>
