@@ -62,22 +62,20 @@ export default function AboutPage() {
               const isReversed = index % 2 !== 0;
 
               return (
-                <Card key={member.name} className="bg-secondary/50 overflow-hidden shadow-md rounded-2xl">
-                  <div className={cn("grid grid-cols-1 md:grid-cols-5 items-center gap-8 md:gap-12", isReversed ? "md:grid-flow-col-dense" : "")}>
-                    <div className={cn("w-full p-8 md:p-0", isReversed ? "md:col-start-4 md:col-span-2" : "md:col-span-2")}>
+                <Card key={member.name} className="bg-secondary/50 overflow-hidden border drop-shadow-md rounded-2xl">
+                  <div className={cn("grid grid-cols-1 md:grid-cols-5 items-stretch", isReversed ? "md:grid-flow-col-dense" : "")}>
+                    <div className={cn("relative min-h-[300px] md:min-h-full", isReversed ? "md:col-start-4 md:col-span-2" : "md:col-span-2")}>
                       {memberImage && (
-                        <div className="aspect-square relative w-full max-w-sm mx-auto md:max-w-none p-4">
                           <Image
                             src={memberImage.imageUrl}
                             alt={member.name}
                             data-ai-hint={memberImage.imageHint}
                             fill
-                            className="object-cover rounded-2xl"
+                            className="object-cover"
                           />
-                        </div>
                       )}
                     </div>
-                    <div className="md:col-span-3 p-8 pt-0 md:p-8 text-left">
+                    <div className="md:col-span-3 p-8 text-left flex flex-col justify-center">
                       <h3 className="font-headline text-2xl font-bold">{member.name}</h3>
                       <p className="text-primary font-semibold text-lg mb-4">{member.role}</p>
                       <p className="text-muted-foreground">{member.bio}</p>
