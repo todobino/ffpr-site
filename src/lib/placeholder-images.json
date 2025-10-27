@@ -65,6 +65,24 @@
       "description": "A stunning view of the mountains in central Puerto Rico, showcasing the high-elevation landscape.",
       "imageUrl": "https://images.unsplash.com/photo-1615902224255-758953183d24?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwdWVydG8lMjByaWNvJTIwbW91bnRhaW5zfGVufDB8fHx8MTc2MjEwMTQ3NHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "puerto rico mountains"
+    },
+    {
+      "id": "mike-profile",
+      "description": "Profile photo of Mike Maloney.",
+      "imageUrl": "/Mike-Profile.jpg",
+      "imageHint": "professional headshot man"
+    },
+    {
+      "id": "brian-profile",
+      "description": "Profile photo of Brian Kimble.",
+      "imageUrl": "/Brian-Profile.jpg",
+      "imageHint": "professional headshot man"
+    },
+    {
+      "id": "pedro-profile",
+      "description": "Profile photo of Pedro Prado.",
+      "imageUrl": "/Pedro-Profile.jpg",
+      "imageHint": "professional headshot man"
     }
   ]
 }

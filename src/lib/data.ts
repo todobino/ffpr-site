@@ -23,7 +23,7 @@ export const teamMembers = [
   {
     name: 'Mike Maloney',
     role: 'Board Chair',
-    image: 'team-member-1',
+    image: 'mike-profile',
     bio: 'Founder of Freedom Farms, Mike is a relentless advocate of maximum resilience, freedom and prosperity. As a world-renown economist, monetary historian, and author of the two best-selling books on precious metals investing, Mike is host of a YouTube channel with over 125 million views and the smash hit video series Hidden Secrets of Money. In 2005, he founded one of the world’s most respected precious metals dealers, GoldSilver.com, which has since reached more than $2 billion in total sales. He is also an exceptional industrial designer. His designs from the 1980s landed him the cover of international design magazine, and permanent placement in one of the world’s greatest museums, the Royal Queen Victoria, Prince Albert Museum in London.'
   },
   {
@@ -65,7 +65,7 @@ export const teamMembers = [
   {
     name: 'Pedro Prado',
     role: 'Executive',
-    image: 'team-member-2',
+    image: 'pedro-profile',
     bio: 'Pedro Prado is a farmer specialized in raising pasture-raised animals roaming free on grass, such as laying hens, beef cattle, pigs, and sheep. He is a passionate advocate for regenerative agriculture, blending his expertise in industrial microbiology with sustainable livestock practices. With a Bachelor’s degree in Industrial Microbiology from the University of Puerto Rico and a scientific career that includes pioneering research in bioremediation for the U.S. Department of Energy, Pedro has tirelessly worked to improve soil health and animal welfare with the goal of producing nutrient-dense and healthy food. His training under the guidance of farmers like Joel Salatin and Greg Judy, combined with his current role as Director of Operations at Finca Pastoreo, has established him as a prominent figure in regenerative agriculture in Puerto Rico. His  innovative approach to holistic pasture management and ethical livestock production reflects his commitment to sustainability.'
   },
   {
@@ -83,7 +83,7 @@ export const teamMembers = [
   {
     name: 'Brian Kimble',
     role: 'Executive',
-    image: 'team-member-2',
+    image: 'brian-profile',
     bio: 'Brian Kimble is the Head of Business Development at Symton Inc., the leading provider of Black Soldier Fly Larvae for reptile nutrition in the U.S. He drives strategic growth and industry partnerships, expanding Symton’s impact in pet nutrition, insect agriculture, and sustainable waste-to-value solutions.'
   },
   {
