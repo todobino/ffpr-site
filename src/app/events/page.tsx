@@ -3,8 +3,9 @@ import Image from "next/image";
 import { getPlaceholderImage } from "@/lib/placeholder-images";
 import { events } from "@/lib/data";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Clock, MapPin, Briefcase } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Clock } from "lucide-react";
+import { EventRsvpForm } from "@/components/events/event-rsvp-form";
+
 
 export default function EventsPage() {
   const event = events[0]; // There is only one event now
@@ -64,7 +65,9 @@ export default function EventsPage() {
                 <div className="mt-6 bg-primary/10 p-4 rounded-lg text-center">
                   <p className="text-sm text-primary font-semibold">Exact date to be announced after the New Orleans Investment Conference.</p>
                 </div>
-                <Button className="mt-6 w-full" size="lg">RSVP to Express Interest</Button>
+                <div className="mt-6">
+                  <EventRsvpForm eventId={event.title} />
+                </div>
               </CardContent>
             </div>
           </Card>
@@ -73,3 +76,4 @@ export default function EventsPage() {
     </>
   );
 }
+
