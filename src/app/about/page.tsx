@@ -62,16 +62,17 @@ export default function AboutPage() {
               const isReversed = index % 2 !== 0;
 
               return (
-                <Card key={member.name} className="bg-secondary/50 overflow-hidden border drop-shadow-md rounded-2xl">
+                <Card key={member.name} className="bg-secondary/50 overflow-hidden border-border drop-shadow-sm rounded-2xl border">
                   <div className={cn("grid grid-cols-1 md:grid-cols-5 items-stretch", isReversed ? "md:grid-flow-col-dense" : "")}>
-                    <div className={cn("relative min-h-[300px] md:min-h-full", isReversed ? "md:col-start-4 md:col-span-2" : "md:col-span-2")}>
+                    <div className={cn("relative w-full h-auto", isReversed ? "md:col-start-4 md:col-span-2" : "md:col-span-2")}>
                       {memberImage && (
                           <Image
                             src={memberImage.imageUrl}
                             alt={member.name}
                             data-ai-hint={memberImage.imageHint}
-                            fill
-                            className="object-cover"
+                            width={600}
+                            height={800}
+                            className="object-cover w-full h-full"
                           />
                       )}
                     </div>
