@@ -1,11 +1,17 @@
 import { siteConfig } from "@/config/site";
-import { Leaf } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 export function Logo() {
   return (
     <Link href="/" className="flex items-center gap-2">
-      <Leaf className="h-6 w-6 text-primary" />
+      <Image
+        src="/ffpr_logo_black.png"
+        alt="Freedom Farms Logo"
+        width={28}
+        height={28}
+        className="h-7 w-7"
+      />
       <span className="text-xl font-bold tracking-tight text-primary">
         {siteConfig.name}
       </span>
