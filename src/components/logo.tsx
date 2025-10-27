@@ -12,7 +12,7 @@ export function Logo() {
         height={28}
         className="h-7 w-7"
       />
-      <span className="text-xl font-bold tracking-tight text-primary">
+      <span className="text-xl font-bold tracking-tight text-foreground">
         {siteConfig.name}
       </span>
     </Link>
