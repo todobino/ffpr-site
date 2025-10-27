@@ -101,6 +101,12 @@
       "description": "Profile photo of Robert Helms.",
       "imageUrl": "/Robert-Profile.jpg",
       "imageHint": "professional headshot man"
+    },
+    {
+      "id": "dan-rubock-profile",
+      "description": "Profile photo of Dan Rubock.",
+      "imageUrl": "/Dan-Profile.jpeg",
+      "imageHint": "professional headshot man"
     }
   ]
 }

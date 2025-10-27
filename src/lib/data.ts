@@ -59,7 +59,7 @@ export const teamMembers = [
   {
     name: 'Dan Rubock',
     role: 'Marketing/Media',
-    image: 'team-member-1',
+    image: 'dan-rubock-profile',
     bio: 'Dan has worked with Mike Maloney since 2009. As a former member of GoldSilver.com’s board of directors, he helped position the company for a successful acquisition. Dan is a media specialist from Australia, and took an equity deal with Mr. Maloney in return for running the marketing/media divisions of Mike’s companies. It was his foresight of foregoing traditional media outlets and concentrating on YouTube that led to the smash hit video series Hidden Secrets of Money, which helped to make GoldSilver.com one of the most visible precious metals dealer’s on the internet. Since then, Dan has helped establish Freedom Farms from the very beginning, and he is responsible for messaging and marketing for Freedom Farms, including the possibility of a ‘reality show’ based on the farm.'
   },
   {
