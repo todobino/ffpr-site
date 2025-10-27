@@ -1,0 +1,89 @@
+/**
+ * @fileoverview Firestore Security Rules for Freedom Farms application.
+ *
+ * Core Philosophy:
+ * This ruleset provides open read access and open write access to specific
+ * collections, specifically contact form submissions, career applications,
+ * event registrations, and events. This facilitates easy data collection
+ * from website forms and public event information.
+ *
+ * Data Structure:
+ * The Firestore database contains the following top-level collections:
+ * - /contact_form_submissions/{contactFormSubmissionId}
+ * - /career_applications/{careerApplicationId}
+ * - /events/{eventId}
+ * - /event_registrations/{eventRegistrationId}
+ *
+ * Key Security Decisions:
+ * - Public Read Access: Events are readable by anyone.
+ * - Public Write Access: Contact form submissions, career applications, and
+ *   event registrations can be created by anyone.
+ * - No listing restrictions are in place.
+ *
+ * Note: While write access is open, input validation at the application level
+ * is essential to prevent malicious data.
+ */
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    /**
+     * @description Allows anyone to read and write contact form submissions.
+     * @path /contact_form_submissions/{contactFormSubmissionId}
+     * @allow (create) Any unauthenticated user can submit a contact form.
+     * @allow (get, list) Any user can read contact form submissions.
+     * @deny (update, delete) No user can update or delete contact form submissions.
+     * @principle Allows public write access to the contact_form_submissions collection.
+     */
+    match /contact_form_submissions/{contactFormSubmissionId} {
+      allow get, list: if true;
+      allow create: if true;
+      allow update: if false;
+      allow delete: if false;
+    }
+
+    /**
+     * @description Allows anyone to read and write career applications.
+     * @path /career_applications/{careerApplicationId}
+     * @allow (create) Any unauthenticated user can submit a career application.
+     * @allow (get, list) Any user can read career applications.
+     * @deny (update, delete) No user can update or delete career applications.
+     * @principle Allows public write access to the career_applications collection.
+     */
+    match /career_applications/{careerApplicationId} {
+      allow get, list: if true;
+      allow create: if true;
+      allow update: if false;
+      allow delete: if false;
+    }
+
+    /**
+     * @description Allows anyone to read events.
+     * @path /events/{eventId}
+     * @allow (get, list) Any user can read event details.
+     * @deny (create, update, delete) No user can create, update, or delete events.
+     * @principle Events are publicly readable.
+     */
+    match /events/{eventId} {
+      allow get, list: if true;
+      allow create: if false;
+      allow update: if false;
+      allow delete: if false;
+    }
+
+    /**
+     * @description Allows anyone to read and write event registrations.
+     * @path /event_registrations/{eventRegistrationId}
+     * @allow (create) Any unauthenticated user can register for an event.
+     * @allow (get, list) Any user can read event registrations.
+     * @deny (update, delete) No user can update or delete event registrations.
+     * @principle Allows public write access to the event_registrations collection.
+     */
+    match /event_registrations/{eventRegistrationId} {
+      allow get, list: if true;
+      allow create: if true;
+      allow update: if false;
+      allow delete: if false;
+    }
+  }
+}

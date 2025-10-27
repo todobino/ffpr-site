@@ -1,0 +1,247 @@
+{
+  "entities": {
+    "ContactFormSubmission": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "ContactFormSubmission",
+      "type": "object",
+      "description": "Represents a contact form submission from the website.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the contact form submission."
+        },
+        "name": {
+          "type": "string",
+          "description": "Name of the person submitting the form."
+        },
+        "email": {
+          "type": "string",
+          "description": "Email address of the person submitting the form.",
+          "format": "email"
+        },
+        "subject": {
+          "type": "string",
+          "description": "Subject of the inquiry."
+        },
+        "message": {
+          "type": "string",
+          "description": "The message content from the contact form."
+        },
+        "submissionDate": {
+          "type": "string",
+          "description": "Date and time when the form was submitted.",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "email",
+        "subject",
+        "message",
+        "submissionDate"
+      ]
+    },
+    "CareerApplication": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "CareerApplication",
+      "type": "object",
+      "description": "Represents a career application submitted through the website.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the career application."
+        },
+        "applicantName": {
+          "type": "string",
+          "description": "Name of the applicant."
+        },
+        "applicantEmail": {
+          "type": "string",
+          "description": "Email address of the applicant.",
+          "format": "email"
+        },
+        "positionAppliedFor": {
+          "type": "string",
+          "description": "The position the applicant is applying for."
+        },
+        "resumeUrl": {
+          "type": "string",
+          "description": "URL to the applicant's resume.",
+          "format": "uri"
+        },
+        "coverLetter": {
+          "type": "string",
+          "description": "Optional cover letter submitted with the application."
+        },
+        "submissionDate": {
+          "type": "string",
+          "description": "Date and time when the application was submitted.",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "applicantName",
+        "applicantEmail",
+        "positionAppliedFor",
+        "resumeUrl",
+        "submissionDate"
+      ]
+    },
+    "EventRegistration": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "EventRegistration",
+      "type": "object",
+      "description": "Represents a user registration for an event.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the event registration."
+        },
+        "eventId": {
+          "type": "string",
+          "description": "Reference to Event. (Relationship: Event 1:N EventRegistration)"
+        },
+        "name": {
+          "type": "string",
+          "description": "Name of the person registering for the event."
+        },
+        "email": {
+          "type": "string",
+          "description": "Email address of the person registering for the event.",
+          "format": "email"
+        },
+        "registrationDate": {
+          "type": "string",
+          "description": "Date and time when the registration was submitted.",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "eventId",
+        "name",
+        "email",
+        "registrationDate"
+      ]
+    },
+    "Event": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Event",
+      "type": "object",
+      "description": "Represents an event at Freedom Farms.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the event."
+        },
+        "title": {
+          "type": "string",
+          "description": "Title of the event."
+        },
+        "description": {
+          "type": "string",
+          "description": "Description of the event."
+        },
+        "startDate": {
+          "type": "string",
+          "description": "Start date and time of the event.",
+          "format": "date-time"
+        },
+        "endDate": {
+          "type": "string",
+          "description": "End date and time of the event.",
+          "format": "date-time"
+        },
+        "location": {
+          "type": "string",
+          "description": "Location of the event."
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "description",
+        "startDate",
+        "endDate",
+        "location"
+      ]
+    }
+  },
+  "auth": {
+    "providers": [
+      "password",
+      "anonymous"
+    ]
+  },
+  "firestore": {
+    "structure": [
+      {
+        "path": "/contact_form_submissions/{contactFormSubmissionId}",
+        "definition": {
+          "entityName": "ContactFormSubmission",
+          "schema": {
+            "$ref": "#/backend/entities/ContactFormSubmission"
+          },
+          "description": "Stores contact form submissions.  No specific authorization requirements. Public write access with input validation enforced.",
+          "params": [
+            {
+              "name": "contactFormSubmissionId",
+              "description": "The unique identifier of the contact form submission."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/career_applications/{careerApplicationId}",
+        "definition": {
+          "entityName": "CareerApplication",
+          "schema": {
+            "$ref": "#/backend/entities/CareerApplication"
+          },
+          "description": "Stores career applications. No specific authorization requirements. Public write access with input validation enforced.",
+          "params": [
+            {
+              "name": "careerApplicationId",
+              "description": "The unique identifier of the career application."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/events/{eventId}",
+        "definition": {
+          "entityName": "Event",
+          "schema": {
+            "$ref": "#/backend/entities/Event"
+          },
+          "description": "Stores event details. No specific authorization requirements. This collection stores events and it is assummed that it can be read by anyone.",
+          "params": [
+            {
+              "name": "eventId",
+              "description": "The unique identifier of the event."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/event_registrations/{eventRegistrationId}",
+        "definition": {
+          "entityName": "EventRegistration",
+          "schema": {
+            "$ref": "#/backend/entities/EventRegistration"
+          },
+          "description": "Stores event registrations. No specific authorization requirements. Public write access with input validation enforced.",
+          "params": [
+            {
+              "name": "eventRegistrationId",
+              "description": "The unique identifier of the event registration."
+            }
+          ]
+        }
+      }
+    ],
+    "reasoning": "The Firestore structure is designed to store data related to Freedom Farms' website forms. It includes collections for contact form submissions, career applications, events, and event registrations. To ensure clarity, security, and scalability, each form submission type is stored in its own top-level collection. This structural segregation allows for simplified security rules, as each collection can have its own distinct set of access controls.\n\n**Authorization Independence:** No explicit authorization requirements were specified. Given the nature of the data (form submissions), public write access with strong input validation is assumed for `/contact_form_submissions`, `/career_applications` and `/event_registrations`. The event details are stored in the `/events` collection.\n\n**QAPs (Rules are not Filters):** Since the primary access pattern for submissions is likely administrative review, storing each type in a separate collection ensures that listing operations can be performed securely and efficiently. A rogue user cannot retrieve all submissions by manipulating query parameters, as each collection represents a distinct entity type. Input validation rules will ensure that no malicious script can be added to any of the fields. The events do not have any authorization requirements, assuming they are managed internally by administrators and are readable by anyone."
+  }
+}
