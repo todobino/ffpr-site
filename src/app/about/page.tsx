@@ -56,30 +56,28 @@ export default function AboutPage() {
           <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary tracking-tight mb-12">
             Meet Our Team
           </h2>
-          <div className="space-y-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
             {teamMembers.map((member, index) => {
               const memberImage = getPlaceholderImage(member.image);
-              const isReversed = index % 2 !== 0;
 
               return (
-                <Card key={member.name} className="bg-secondary/50 overflow-hidden border-border drop-shadow-sm rounded-2xl border">
-                  <div className={cn("grid grid-cols-1 md:grid-cols-3 items-stretch", isReversed ? "md:grid-flow-col-dense" : "")}>
-                    <div className={cn("relative w-full h-auto", isReversed ? "md:col-start-3 md:col-span-1" : "md:col-span-1")}>
-                      {memberImage && (
+                <Card key={member.name} className="bg-secondary/50 overflow-hidden border-border drop-shadow-sm rounded-2xl border flex flex-col">
+                  <div className="flex flex-col h-full">
+                    {memberImage && (
+                        <div className="relative w-full aspect-[4/3]">
                           <Image
                             src={memberImage.imageUrl}
                             alt={member.name}
                             data-ai-hint={memberImage.imageHint}
-                            width={600}
-                            height={800}
-                            className="object-cover w-full h-full"
+                            fill
+                            className="object-cover"
                           />
-                      )}
-                    </div>
-                    <div className="md:col-span-2 p-8 text-left flex flex-col justify-center">
+                        </div>
+                    )}
+                    <div className="p-6 text-left flex flex-col justify-center flex-grow">
                       <h3 className="font-headline text-2xl font-bold">{member.name}</h3>
                       <p className="text-primary font-semibold text-lg mb-4">{member.role}</p>
-                      <p className="text-muted-foreground">{member.bio}</p>
+                      <p className="text-muted-foreground text-sm">{member.bio}</p>
                     </div>
                   </div>
                 </Card>
