@@ -1,3 +1,4 @@
+
 "use server";
 
 import {
@@ -6,8 +7,7 @@ import {
   type CarbonNegativityMetricOutput,
 } from "@/ai/flows/display-dynamic-carbon-negativity-metric";
 import { initializeFirebase } from "@/firebase";
-import { addDocumentNonBlocking } from "@/firebase/non-blocking-updates";
-import { collection } from "firebase/firestore";
+import { collection, addDoc } from "firebase/firestore";
 import { z } from "zod";
 
 export async function getCarbonMetric(
@@ -51,7 +51,7 @@ export async function submitContactForm(prevState: any, formData: FormData) {
   const submissionsRef = collection(firestore, "contact_form_submissions");
 
   try {
-    addDocumentNonBlocking(submissionsRef, {
+    await addDoc(submissionsRef, {
       ...validatedFields.data,
       submissionDate: new Date().toISOString(),
     });
@@ -63,8 +63,9 @@ export async function submitContactForm(prevState: any, formData: FormData) {
     };
   } catch (error) {
     console.error("Error saving contact form submission:", error);
+    const errorMessage = error instanceof Error ? error.message : "An unexpected error occurred.";
     return {
-      message: "An unexpected error occurred. Please try again.",
+      message: `An unexpected error occurred: ${errorMessage}`,
       success: false,
       errors: {},
     };
@@ -103,7 +104,7 @@ export async function submitCareerApplication(
   const applicationsRef = collection(firestore, "career_applications");
 
   try {
-    addDocumentNonBlocking(applicationsRef, {
+    await addDoc(applicationsRef, {
       ...validatedFields.data,
       submissionDate: new Date().toISOString(),
     });
@@ -115,8 +116,9 @@ export async function submitCareerApplication(
     };
   } catch (error) {
     console.error("Error saving career application:", error);
+    const errorMessage = error instanceof Error ? error.message : "An unexpected error occurred.";
     return {
-      message: "An unexpected error occurred. Please try again.",
+      message: `An unexpected error occurred: ${errorMessage}`,
       success: false,
       errors: {},
     };
@@ -151,7 +153,7 @@ export async function submitEventRegistration(
   const registrationsRef = collection(firestore, "event_registrations");
 
   try {
-    addDocumentNonBlocking(registrationsRef, {
+    await addDoc(registrationsRef, {
       ...validatedFields.data,
       registrationDate: new Date().toISOString(),
     });
@@ -164,8 +166,9 @@ export async function submitEventRegistration(
     };
   } catch (error) {
     console.error("Error saving event registration:", error);
+    const errorMessage = error instanceof Error ? error.message : "An unexpected error occurred.";
     return {
-      message: "An unexpected error occurred. Please try again.",
+      message: `An unexpected error occurred: ${errorMessage}`,
       success: false,
       errors: {},
     };
