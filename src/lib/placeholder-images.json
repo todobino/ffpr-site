@@ -83,6 +83,24 @@
       "description": "Profile photo of Pedro Prado.",
       "imageUrl": "/Pedro-Profile.jpeg",
       "imageHint": "professional headshot man"
+    },
+    {
+      "id": "robby-profile",
+      "description": "Profile photo of Robby Marsh.",
+      "imageUrl": "/Robby-Profile.jpeg",
+      "imageHint": "professional headshot man"
+    },
+    {
+      "id": "derek-profile",
+      "description": "Profile photo of Derek Speigner.",
+      "imageUrl": "/Derek-Profile.jpeg",
+      "imageHint": "professional headshot man"
+    },
+    {
+      "id": "robert-helms-profile",
+      "description": "Profile photo of Robert Helms.",
+      "imageUrl": "/Robert-Profile.jpg",
+      "imageHint": "professional headshot man"
     }
   ]
 }

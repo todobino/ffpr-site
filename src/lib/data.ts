@@ -29,19 +29,19 @@ export const teamMembers = [
   {
     name: 'Robert Helms',
     role: 'Boardmember',
-    image: 'team-member-2',
+    image: 'robert-helms-profile',
     bio: 'With investment and development experience in nine states and six countries, Robert’s past and current projects are valued at over $800 Million. A passionate teacher, he hosts the nationally syndicated radio show The Real Estate Guys™, now in its twenty-ninth year of broadcast. The podcast version of the show is one of the most downloaded podcasts on real estate and is heard in more than 190 countries.'
   },
   {
     name: 'Derek Speigner',
     role: 'Boardmember',
-    image: 'team-member-3',
+    image: 'derek-profile',
     bio: 'Co-founder & CEO Arise Equity Management & Affiliates. Having built a $200M portfolio of best-in-the-market real estate assets across Texas, Derek is a strategic business leader that see’s value and attacks opportunities. His knack for investing since joining the professional real estate investment industry stems from prior work in Fortune 10 downstream and midstream oil & gas production. His experience in chemical engineering & process technology comes from the largest public and private producers in America. Bringing with him the lessons of history’s most influential industry – operating the nation’s most profitable, complex, and century-old multi-billion dollar revenue refining facilities – lends itself perfectly to the yet unsolved and complex needs of regenerative agriculture at scale. '
   },
   {
     name: 'Robby Marsh',
     role: 'Boardmember',
-    image: 'team-member-1',
+    image: 'robby-profile',
     bio: 'President & CEO of JH Boyd Enterprises Inc.; Co-Founder, Principal of Arise Equity Management and Affiliates; Founder of Boyd Legacy; and other ventures. With a booming portfolio of commercial real estate and energy investments, Robby Marsh is a renowned leader in financial resilience and wealth generation; capital project investment, development and execution; and energy independence and stability. During a decade of Global Projects ExxonMobil and over a decade in investment real estate, Robby has been a key leader in over $12B of funds deployed. His network extends from the oil field to Capitol Hill, retail investors to midcap investment funds, field construction and operations to the executive board room.'
   },
   {
