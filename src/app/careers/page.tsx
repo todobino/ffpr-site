@@ -33,7 +33,7 @@ export default function CareersPage() {
       <div className="container py-12 md:py-24">
         <div className="max-w-4xl mx-auto">
           <Card className="overflow-hidden shadow-lg">
-            <CardHeader className="bg-secondary/30 p-8 border-b">
+            <CardHeader className="bg-white p-8 border-b">
               <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                 <div>
                   <CardTitle className="font-headline text-3xl text-primary">{job.title}</CardTitle>
