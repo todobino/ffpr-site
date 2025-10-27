@@ -70,7 +70,7 @@ export default function AboutPage() {
                             alt={member.name}
                             data-ai-hint={memberImage.imageHint}
                             fill
-                            className="object-cover"
+                            className="object-cover object-top"
                           />
                         </div>
                     )}
