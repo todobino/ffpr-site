@@ -63,8 +63,8 @@ export default function AboutPage() {
 
               return (
                 <Card key={member.name} className="bg-secondary/50 overflow-hidden border-border drop-shadow-sm rounded-2xl border">
-                  <div className={cn("grid grid-cols-1 md:grid-cols-5 items-stretch", isReversed ? "md:grid-flow-col-dense" : "")}>
-                    <div className={cn("relative w-full h-auto", isReversed ? "md:col-start-4 md:col-span-2" : "md:col-span-2")}>
+                  <div className={cn("grid grid-cols-1 md:grid-cols-3 items-stretch", isReversed ? "md:grid-flow-col-dense" : "")}>
+                    <div className={cn("relative w-full h-auto", isReversed ? "md:col-start-3 md:col-span-1" : "md:col-span-1")}>
                       {memberImage && (
                           <Image
                             src={memberImage.imageUrl}
@@ -76,7 +76,7 @@ export default function AboutPage() {
                           />
                       )}
                     </div>
-                    <div className="md:col-span-3 p-8 text-left flex flex-col justify-center">
+                    <div className="md:col-span-2 p-8 text-left flex flex-col justify-center">
                       <h3 className="font-headline text-2xl font-bold">{member.name}</h3>
                       <p className="text-primary font-semibold text-lg mb-4">{member.role}</p>
                       <p className="text-muted-foreground">{member.bio}</p>
