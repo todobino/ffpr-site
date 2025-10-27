@@ -61,10 +61,10 @@ export default function AboutPage() {
               const memberImage = getPlaceholderImage(member.image);
 
               return (
-                <Card key={member.name} className="bg-secondary/50 overflow-hidden border-border drop-shadow-sm rounded-2xl border flex flex-col">
-                  <div className="flex flex-col h-full">
+                <Card key={member.name} className="bg-secondary/50 overflow-hidden border-border drop-shadow-sm rounded-2xl flex flex-col md:flex-row">
+                  <div className="md:w-1/3 w-full">
                     {memberImage && (
-                        <div className="relative w-full aspect-[4/3]">
+                        <div className="relative w-full h-full min-h-[200px] md:min-h-0">
                           <Image
                             src={memberImage.imageUrl}
                             alt={member.name}
@@ -74,11 +74,11 @@ export default function AboutPage() {
                           />
                         </div>
                     )}
-                    <div className="p-6 text-left flex flex-col justify-center flex-grow">
-                      <h3 className="font-headline text-2xl font-bold">{member.name}</h3>
-                      <p className="text-primary font-semibold text-lg mb-4">{member.role}</p>
-                      <p className="text-muted-foreground text-sm">{member.bio}</p>
-                    </div>
+                  </div>
+                  <div className="md:w-2/3 p-6 text-left flex flex-col justify-center">
+                    <h3 className="font-headline text-2xl font-bold">{member.name}</h3>
+                    <p className="text-primary font-semibold text-lg mb-4">{member.role}</p>
+                    <p className="text-muted-foreground text-sm">{member.bio}</p>
                   </div>
                 </Card>
               );
