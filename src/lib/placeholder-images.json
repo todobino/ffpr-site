@@ -49,6 +49,18 @@
       "imageHint": "professional headshot person"
     },
     {
+      "id": "philip-sarsons-profile",
+      "description": "Profile photo of Philip W. Sarsons.",
+      "imageUrl": "/Phil-Profile.jpeg",
+      "imageHint": "professional headshot man"
+    },
+    {
+      "id": "nikola-spassov-profile",
+      "description": "Profile photo of Nikola Spassov.",
+      "imageUrl": "/Niko-Profile.jpeg",
+      "imageHint": "professional headshot man"
+    },
+    {
       "id": "puerto-rico-advantage",
       "description": "A stunning view of the mountains in central Puerto Rico, showcasing the high-elevation landscape.",
       "imageUrl": "https://images.unsplash.com/photo-1615902224255-758953183d24?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwdWVydG8lMjByaWNvJTIwbW91bnRhaW5zfGVufDB8fHx8MTc2MjEwMTQ3NHww&ixlib=rb-4.1.0&q=80&w=1080",

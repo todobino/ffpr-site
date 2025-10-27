@@ -71,13 +71,13 @@ export const teamMembers = [
   {
     name: 'Philip W. Sarsons',
     role: 'Executive',
-    image: 'team-member-3',
+    image: 'philip-sarsons-profile',
     bio: 'Mr. Sarsons has already submitted a combined value of $70.5M of federal opportunities to support Freedom Farms, through the USDA and DOE. He has aligned the Farms project with the NRCS, for their financial supports to physically build out the project, and VETS, Veteran Employment Training Services, expanding regenerative farming into the social realm, for meaningful, supported employment opportunities to Puerto Rican veteran servicemen and women. Phil arrives to Freedom Farms from delivering public services in Canada, securing millions of dollars in sponsorships of post-secondary education plans, for hundreds of underemployed people. Philip brings a near-decade of policy analysis and public services delivery to Freedom Farms, as well as his own personal experience homesteading.'
   },
   {
     name: 'Nikola Spassov',
     role: 'Farm Manager',
-    image: 'team-member-1',
+    image: 'nikola-spassov-profile',
     bio: 'Nikola’s passion for regenerative agriculture has taken him across the USA and Europe, learning from successful and high-profile farmers, as well as leading workshops in Central & South America, Puerto Rico, and in Bulgaria - teaching in three languages. Nikola’s intimate knowledge of the Jayuya landscape is fundamental to the growing success of food security in the area. Niko is also professional boat builder, and, the National Champion of Bulgaria in both boat racing and water skiing! He loves the Caribbean waters, and though has no titles in PR — yet! — he has been chopping surf and ruffling the local waves in PR’s wind surfing competitions, the Expression Sessions.'
   },
   {
