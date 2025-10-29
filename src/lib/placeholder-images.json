@@ -107,6 +107,18 @@
       "description": "Profile photo of Dan Rubock.",
       "imageUrl": "/Dan-Profile.jpeg",
       "imageHint": "professional headshot man"
+    },
+    {
+      "id": "rick-pinney-profile",
+      "description": "Profile photo of Rick Pinney.",
+      "imageUrl": "/Rick-Profile.jpg",
+      "imageHint": "professional headshot man"
+    },
+    {
+      "id": "james-mccandless-profile",
+      "description": "Profile photo of James McCandless.",
+      "imageUrl": "/James-Profile.jpg",
+      "imageHint": "professional headshot man"
     }
   ]
 }
