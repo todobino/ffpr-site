@@ -56,12 +56,12 @@ export default function AboutPage() {
           <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary tracking-tight mb-12">
             Meet Our Team
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+          <div className="grid grid-cols-1 gap-8 lg:gap-12 max-w-5xl mx-auto">
             {teamMembers.map((member, index) => {
               const memberImage = getPlaceholderImage(member.image);
 
               return (
-                <Card key={member.name} className="bg-secondary/50 overflow-hidden border-border drop-shadow-sm rounded-2xl flex flex-col md:flex-row">
+                <Card key={member.name} className={cn("bg-secondary/50 overflow-hidden border-border drop-shadow-sm rounded-2xl flex flex-col md:flex-row", { "md:flex-row-reverse": index % 2 !== 0 })}>
                   <div className="relative md:w-2/5 w-full">
                     {memberImage && (
                         <div className="relative w-full h-full min-h-64 md:min-h-full">
