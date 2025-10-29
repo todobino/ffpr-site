@@ -21,8 +21,8 @@
     {
       "id": "event-1",
       "description": "An exclusive, sophisticated gathering for investors at an outdoor, scenic farm location.",
-      "imageUrl": "https://images.unsplash.com/photo-1639442233127-f8866b35b523?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y29tbXVuaXR5JTIwZ2FyZGVuJTIwZXZlbnR8ZW58MHx8fHwxNzYxMjMwOTIwfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "investor meeting outdoors"
+      "imageUrl": "/farm-oranges.jpg",
+      "imageHint": "oranges farm"
     },
     {
       "id": "event-2",
