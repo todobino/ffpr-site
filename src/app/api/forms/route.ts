@@ -1,6 +1,7 @@
 
 import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
+import { getFirestoreAdmin } from "@/firebase/admin";
 
 export const runtime = "nodejs";
 
@@ -71,47 +72,52 @@ export async function POST(req: NextRequest) {
 
     const webhook =
       process.env[cfg.webhookEnv] || process.env["SLACK_WEBHOOK_DEFAULT"];
-    if (!webhook) {
-      return NextResponse.json({ error: `Missing Slack webhook env for ${type}` }, { status: 500 });
-    }
+    if (webhook) {
+      // light metadata
+      const meta = {
+        url: req.headers.get("referer") ?? undefined,
+        ip: req.headers.get("x-forwarded-for")?.split(",")[0],
+        ua: req.headers.get("user-agent") ?? undefined,
+        ts: new Date().toISOString(),
+      };
 
-    // light metadata
-    const meta = {
-      url: req.headers.get("referer") ?? undefined,
-      ip: req.headers.get("x-forwarded-for")?.split(",")[0],
-      ua: req.headers.get("user-agent") ?? undefined,
-      ts: new Date().toISOString(),
-    };
+      const payload = { blocks: toBlocks(cfg.title, type, parsed.data, meta) };
 
-    const payload = { blocks: toBlocks(cfg.title, type, parsed.data, meta) };
+      const res = await fetch(webhook, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
 
-    const res = await fetch(webhook, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload),
-    });
-
-    if (!res.ok) {
-      const text = await res.text();
-      // Also save to firestore as a backup
-      return NextResponse.json({ error: `Slack error: ${text}` }, { status: 502 });
-    }
-    
-    // Also save to firestore as a backup
-    const { initializeFirebase } = await import("@/firebase");
-    const { collection, addDoc } = await import("firebase/firestore");
-    const { firestore } = initializeFirebase();
-    const submissionsRef = collection(firestore, "formSubmissions");
-    await addDoc(submissionsRef, {
-      type,
-      ...parsed.data,
-      submissionDate: meta.ts,
-      metadata: {
-        url: meta.url,
-        ip: meta.ip,
-        userAgent: meta.ua
+      if (!res.ok) {
+        const text = await res.text();
+        console.warn(`Slack webhook failed with status ${res.status}: ${text}`);
       }
-    });
+    }
+
+
+    // Also save to firestore as a backup
+    try {
+        const firestore = getFirestoreAdmin();
+        const submissionsRef = firestore.collection("formSubmissions");
+
+        const metaForFirestore = {
+            url: req.headers.get("referer") ?? undefined,
+            ip: req.headers.get("x-forwarded-for")?.split(",")[0],
+            userAgent: req.headers.get("user-agent") ?? undefined,
+        };
+
+        await submissionsRef.add({
+            type,
+            data: parsed.data,
+            submissionDate: new Date().toISOString(),
+            metadata: metaForFirestore,
+        });
+    } catch (e: any) {
+        console.error("Firestore write failed:", e);
+        // We don't want to fail the whole request if only Firestore fails
+        // but we should log it.
+    }
 
 
     return NextResponse.json({ ok: true });

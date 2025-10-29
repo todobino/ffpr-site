@@ -6,8 +6,7 @@ import {
   type CarbonNegativityMetricInput,
   type CarbonNegativityMetricOutput,
 } from "@/ai/flows/display-dynamic-carbon-negativity-metric";
-import { initializeFirebase } from "@/firebase";
-import { collection, addDoc } from "firebase/firestore";
+import { getFirestoreAdmin } from "@/firebase/admin";
 import { z } from "zod";
 
 export async function getCarbonMetric(
@@ -51,12 +50,12 @@ export async function submitCareerApplication(
       success: false,
     };
   }
-
-  const { firestore } = initializeFirebase();
-  const applicationsRef = collection(firestore, "career_applications");
+  
+  const firestore = getFirestoreAdmin();
+  const applicationsRef = firestore.collection("career_applications");
 
   try {
-    await addDoc(applicationsRef, {
+    await applicationsRef.add({
       ...validatedFields.data,
       submissionDate: new Date().toISOString(),
     });
