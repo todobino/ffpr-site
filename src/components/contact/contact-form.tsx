@@ -1,22 +1,14 @@
 
 "use client";
 
-import { useActionState } from "react";
+import { useState } from "react";
 import { useFormStatus } from "react-dom";
-import { useEffect } from "react";
-import { submitContactForm } from "@/app/actions";
 import { useToast } from "@/hooks/use-toast";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-
-const initialState = {
-  message: "",
-  errors: {},
-  success: false,
-};
 
 function SubmitButton() {
   const { pending } = useFormStatus();
@@ -28,23 +20,68 @@ function SubmitButton() {
 }
 
 export function ContactForm() {
-  const [state, formAction] = useActionState(submitContactForm, initialState);
+  const [status, setStatus] = useState<"initial" | "sending" | "sent" | "error">("initial");
+  const [error, setError] = useState<string | null>(null);
   const { toast } = useToast();
 
-  useEffect(() => {
-    if (state.success) {
-      toast({
-        title: "Success!",
-        description: state.message,
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setStatus("sending");
+    setError(null);
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
+
+    const payload = {
+      type: "contact",
+      data: {
+        name: data.name,
+        email: data.email,
+        subject: data.subject,
+        message: data.message,
+      },
+    };
+
+    try {
+      const response = await fetch("/api/forms", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
       });
-    } else if (state.message && Object.keys(state.errors).length > 0) {
+
+      if (response.ok) {
+        setStatus("sent");
+        toast({
+          title: "Success!",
+          description: "Thank you! Your message has been sent successfully.",
+        });
+        form.reset();
+      } else {
+        const result = await response.json();
+        setStatus("error");
+        setError(result.error || "An unexpected error occurred.");
+        toast({
+          variant: "destructive",
+          title: "Error",
+          description: result.error || "Could not send message.",
+        });
+      }
+    } catch (err) {
+      setStatus("error");
+      const errorMessage = err instanceof Error ? err.message : "An unexpected network error occurred.";
+      setError(errorMessage);
       toast({
         variant: "destructive",
         title: "Error",
-        description: state.message,
+        description: errorMessage,
       });
+    } finally {
+        if(status !== 'sent') {
+            setStatus('initial');
+        }
     }
-  }, [state, toast]);
+  }
 
   return (
     <Card className="bg-white shadow-lg">
@@ -52,29 +89,29 @@ export function ContactForm() {
         <CardTitle className="font-headline text-2xl">Send us a message</CardTitle>
       </CardHeader>
       <CardContent>
-        <form action={formAction} className="space-y-4">
+        <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <Label htmlFor="name">Name</Label>
-            <Input id="name" name="name" placeholder="Your Name" />
-            {state.errors?.name && (
-              <p className="text-sm text-destructive mt-1">{state.errors.name[0]}</p>
-            )}
+            <Input id="name" name="name" placeholder="Your Name" required />
           </div>
           <div>
             <Label htmlFor="email">Email</Label>
-            <Input id="email" name="email" type="email" placeholder="your@email.com" />
-            {state.errors?.email && (
-              <p className="text-sm text-destructive mt-1">{state.errors.email[0]}</p>
-            )}
+            <Input id="email" name="email" type="email" placeholder="your@email.com" required />
+          </div>
+          <div>
+            <Label htmlFor="subject">Subject</Label>
+            <Input id="subject" name="subject" placeholder="Inquiry Subject" />
           </div>
           <div>
             <Label htmlFor="message">Message</Label>
-            <Textarea id="message" name="message" placeholder="Your message or inquiry..." />
-            {state.errors?.message && (
-              <p className="text-sm text-destructive mt-1">{state.errors.message[0]}</p>
-            )}
+            <Textarea id="message" name="message" placeholder="Your message or inquiry..." required />
           </div>
-          <SubmitButton />
+          <Button type="submit" disabled={status === 'sending'} className="w-full">
+            {status === 'sending' ? "Sending..." : "Send Message"}
+          </Button>
+          {status === 'error' && error && (
+            <p className="text-sm text-destructive mt-2">{error}</p>
+          )}
         </form>
       </CardContent>
     </Card>
