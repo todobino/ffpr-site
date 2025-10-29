@@ -3,7 +3,7 @@ import Image from "next/image";
 import { getPlaceholderImage } from "@/lib/placeholder-images";
 import { events } from "@/lib/data";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Clock } from "lucide-react";
+import { Clock, Info } from "lucide-react";
 import { EventRsvpForm } from "@/components/events/event-rsvp-form";
 
 
@@ -62,7 +62,8 @@ export default function EventsPage() {
               </CardHeader>
               <CardContent className="p-0 pt-6 flex-grow flex flex-col">
                 <CardDescription className="flex-grow text-base text-foreground/80">{event.description}</CardDescription>
-                <div className="mt-6 bg-primary/10 p-4 rounded-lg text-center">
+                <div className="mt-6 bg-primary/10 p-4 rounded-lg flex items-center justify-center gap-3">
+                  <Info className="h-5 w-5 text-primary flex-shrink-0" />
                   <p className="text-sm text-primary font-semibold">Exact date to be announced after the New Orleans Investment Conference.</p>
                 </div>
                 <div className="mt-6">
@@ -76,4 +77,3 @@ export default function EventsPage() {
     </>
   );
 }
-
