@@ -56,33 +56,31 @@ export default function AboutPage() {
           <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary tracking-tight mb-12">
             Meet Our Team
           </h2>
-          <div className="grid grid-cols-1 gap-8 lg:gap-12">
-            {teamMembers.map((member, index) => {
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+            {teamMembers.map((member) => {
               const memberImage = getPlaceholderImage(member.image);
 
               return (
-                <div key={member.name} className={cn("flex w-full", index % 2 === 0 ? "md:justify-start" : "md:justify-end")}>
-                  <Card className={cn("w-full md:w-[70%] bg-secondary/50 overflow-hidden border-border drop-shadow-sm rounded-2xl flex flex-col md:flex-row", { "md:flex-row-reverse": index % 2 !== 0 })}>
-                    <div className="relative md:w-2/5 w-full">
-                      {memberImage && (
-                          <div className="relative w-full h-full min-h-64 md:min-h-full">
-                            <Image
-                              src={memberImage.imageUrl}
-                              alt={member.name}
-                              data-ai-hint={memberImage.imageHint}
-                              fill
-                              className="object-cover object-top"
-                            />
-                          </div>
-                      )}
-                    </div>
-                    <div className="p-6 text-left flex flex-col justify-center flex-grow md:w-3/5">
-                      <h3 className="font-headline text-2xl font-bold">{member.name}</h3>
-                      <p className="text-primary font-semibold text-lg mb-4">{member.role}</p>
-                      <p className="text-muted-foreground text-sm">{member.bio}</p>
-                    </div>
-                  </Card>
-                </div>
+                <Card key={member.name} className="bg-secondary/50 overflow-hidden border-border drop-shadow-sm rounded-2xl flex flex-col md:flex-row">
+                  <div className="relative md:w-2/5 w-full">
+                    {memberImage && (
+                        <div className="relative w-full h-full min-h-64 md:min-h-full">
+                          <Image
+                            src={memberImage.imageUrl}
+                            alt={member.name}
+                            data-ai-hint={memberImage.imageHint}
+                            fill
+                            className="object-cover object-top"
+                          />
+                        </div>
+                    )}
+                  </div>
+                  <div className="p-6 text-left flex flex-col justify-center flex-grow md:w-3/5">
+                    <h3 className="font-headline text-2xl font-bold">{member.name}</h3>
+                    <p className="text-primary font-semibold text-lg mb-4">{member.role}</p>
+                    <p className="text-muted-foreground text-sm">{member.bio}</p>
+                  </div>
+                </Card>
               );
             })}
           </div>
