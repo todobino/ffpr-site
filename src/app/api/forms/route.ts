@@ -1,7 +1,6 @@
 
 import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
-import { getFirestoreAdmin } from "@/firebase/admin";
 
 export const runtime = "nodejs";
 
@@ -94,31 +93,6 @@ export async function POST(req: NextRequest) {
         console.warn(`Slack webhook failed with status ${res.status}: ${text}`);
       }
     }
-
-
-    // Also save to firestore as a backup
-    try {
-        const firestore = getFirestoreAdmin();
-        const submissionsRef = firestore.collection("formSubmissions");
-
-        const metaForFirestore = {
-            url: req.headers.get("referer") ?? undefined,
-            ip: req.headers.get("x-forwarded-for")?.split(",")[0],
-            userAgent: req.headers.get("user-agent") ?? undefined,
-        };
-
-        await submissionsRef.add({
-            type,
-            data: parsed.data,
-            submissionDate: new Date().toISOString(),
-            metadata: metaForFirestore,
-        });
-    } catch (e: any) {
-        console.error("Firestore write failed:", e);
-        // We don't want to fail the whole request if only Firestore fails
-        // but we should log it.
-    }
-
 
     return NextResponse.json({ ok: true });
   } catch (e: any) {

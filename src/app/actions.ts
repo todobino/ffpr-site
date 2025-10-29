@@ -51,27 +51,12 @@ export async function submitCareerApplication(
     };
   }
   
-  const firestore = getFirestoreAdmin();
-  const applicationsRef = firestore.collection("career_applications");
+  // The Firestore write logic has been removed.
+  // The action will now simply return a success message.
 
-  try {
-    await applicationsRef.add({
-      ...validatedFields.data,
-      submissionDate: new Date().toISOString(),
-    });
-
-    return {
-      message: "Thank you for your application! We will be in touch shortly.",
-      success: true,
-      errors: {},
-    };
-  } catch (error) {
-    console.error("Error saving career application:", error);
-    const errorMessage = error instanceof Error ? error.message : "An unexpected error occurred.";
-    return {
-      message: `An unexpected error occurred: ${errorMessage}`,
-      success: false,
-      errors: {},
-    };
-  }
+  return {
+    message: "Thank you for your application! We will be in touch shortly.",
+    success: true,
+    errors: {},
+  };
 }

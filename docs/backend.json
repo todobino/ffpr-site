@@ -149,38 +149,6 @@
   "firestore": {
     "structure": [
       {
-        "path": "/formSubmissions/{formSubmissionId}",
-        "definition": {
-          "entityName": "FormSubmission",
-          "schema": {
-            "$ref": "#/backend/entities/FormSubmission"
-          },
-          "description": "Stores all form submissions from the website as a backup. Public write access with input validation enforced.",
-          "params": [
-            {
-              "name": "formSubmissionId",
-              "description": "The unique identifier of the form submission."
-            }
-          ]
-        }
-      },
-      {
-        "path": "/career_applications/{careerApplicationId}",
-        "definition": {
-          "entityName": "CareerApplication",
-          "schema": {
-            "$ref": "#/backend/entities/CareerApplication"
-          },
-          "description": "Stores career applications. No specific authorization requirements. Public write access with input validation enforced.",
-          "params": [
-            {
-              "name": "careerApplicationId",
-              "description": "The unique identifier of the career application."
-            }
-          ]
-        }
-      },
-      {
         "path": "/events/{eventId}",
         "definition": {
           "entityName": "Event",
