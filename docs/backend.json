@@ -1,45 +1,53 @@
+
 {
   "entities": {
-    "ContactFormSubmission": {
+    "FormSubmission": {
       "$schema": "http://json-schema.org/draft-07/schema#",
-      "title": "ContactFormSubmission",
+      "title": "FormSubmission",
       "type": "object",
-      "description": "Represents a contact form submission from the website.",
+      "description": "Represents a generic form submission from the website.",
       "properties": {
         "id": {
           "type": "string",
-          "description": "Unique identifier for the contact form submission."
+          "description": "Unique identifier for the form submission."
         },
-        "name": {
+        "type": {
           "type": "string",
-          "description": "Name of the person submitting the form."
-        },
-        "email": {
-          "type": "string",
-          "description": "Email address of the person submitting the form.",
-          "format": "email"
-        },
-        "subject": {
-          "type": "string",
-          "description": "Subject of the inquiry."
-        },
-        "message": {
-          "type": "string",
-          "description": "The message content from the contact form."
+          "description": "The type of form submitted (e.g., 'contact', 'eventRegistration')."
         },
         "submissionDate": {
           "type": "string",
           "description": "Date and time when the form was submitted.",
           "format": "date-time"
+        },
+        "data": {
+          "type": "object",
+          "description": "The actual data submitted in the form.",
+          "additionalProperties": true
+        },
+        "metadata": {
+          "type": "object",
+          "description": "Metadata associated with the submission.",
+          "properties": {
+            "url": {
+              "type": "string",
+              "format": "uri"
+            },
+            "ip": {
+              "type": "string",
+              "format": "ipv4"
+            },
+            "userAgent": {
+              "type": "string"
+            }
+          }
         }
       },
       "required": [
         "id",
-        "name",
-        "email",
-        "subject",
-        "message",
-        "submissionDate"
+        "type",
+        "submissionDate",
+        "data"
       ]
     },
     "CareerApplication": {
@@ -87,43 +95,6 @@
         "positionAppliedFor",
         "resumeUrl",
         "submissionDate"
-      ]
-    },
-    "EventRegistration": {
-      "$schema": "http://json-schema.org/draft-07/schema#",
-      "title": "EventRegistration",
-      "type": "object",
-      "description": "Represents a user registration for an event.",
-      "properties": {
-        "id": {
-          "type": "string",
-          "description": "Unique identifier for the event registration."
-        },
-        "eventId": {
-          "type": "string",
-          "description": "Reference to Event. (Relationship: Event 1:N EventRegistration)"
-        },
-        "name": {
-          "type": "string",
-          "description": "Name of the person registering for the event."
-        },
-        "email": {
-          "type": "string",
-          "description": "Email address of the person registering for the event.",
-          "format": "email"
-        },
-        "registrationDate": {
-          "type": "string",
-          "description": "Date and time when the registration was submitted.",
-          "format": "date-time"
-        }
-      },
-      "required": [
-        "id",
-        "eventId",
-        "name",
-        "email",
-        "registrationDate"
       ]
     },
     "Event": {
@@ -178,17 +149,17 @@
   "firestore": {
     "structure": [
       {
-        "path": "/contact_form_submissions/{contactFormSubmissionId}",
+        "path": "/formSubmissions/{formSubmissionId}",
         "definition": {
-          "entityName": "ContactFormSubmission",
+          "entityName": "FormSubmission",
           "schema": {
-            "$ref": "#/backend/entities/ContactFormSubmission"
+            "$ref": "#/backend/entities/FormSubmission"
           },
-          "description": "Stores contact form submissions.  No specific authorization requirements. Public write access with input validation enforced.",
+          "description": "Stores all form submissions from the website as a backup. Public write access with input validation enforced.",
           "params": [
             {
-              "name": "contactFormSubmissionId",
-              "description": "The unique identifier of the contact form submission."
+              "name": "formSubmissionId",
+              "description": "The unique identifier of the form submission."
             }
           ]
         }
@@ -221,22 +192,6 @@
             {
               "name": "eventId",
               "description": "The unique identifier of the event."
-            }
-          ]
-        }
-      },
-      {
-        "path": "/event_registrations/{eventRegistrationId}",
-        "definition": {
-          "entityName": "EventRegistration",
-          "schema": {
-            "$ref": "#/backend/entities/EventRegistration"
-          },
-          "description": "Stores event registrations. No specific authorization requirements. Public write access with input validation enforced.",
-          "params": [
-            {
-              "name": "eventRegistrationId",
-              "description": "The unique identifier of the event registration."
             }
           ]
         }

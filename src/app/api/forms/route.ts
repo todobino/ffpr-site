@@ -101,11 +101,16 @@ export async function POST(req: NextRequest) {
     const { initializeFirebase } = await import("@/firebase");
     const { collection, addDoc } = await import("firebase/firestore");
     const { firestore } = initializeFirebase();
-    const collectionName = type === 'contact' ? 'contact_form_submissions' : 'event_registrations';
-    const submissionsRef = collection(firestore, collectionName);
+    const submissionsRef = collection(firestore, "formSubmissions");
     await addDoc(submissionsRef, {
+      type,
       ...parsed.data,
-      submissionDate: new Date().toISOString(),
+      submissionDate: meta.ts,
+      metadata: {
+        url: meta.url,
+        ip: meta.ip,
+        userAgent: meta.ua
+      }
     });
 
 
