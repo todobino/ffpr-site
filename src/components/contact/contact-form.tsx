@@ -2,22 +2,12 @@
 "use client";
 
 import { useState } from "react";
-import { useFormStatus } from "react-dom";
 import { useToast } from "@/hooks/use-toast";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-
-function SubmitButton() {
-  const { pending } = useFormStatus();
-  return (
-    <Button type="submit" disabled={pending} className="w-full">
-      {pending ? "Sending..." : "Send Message"}
-    </Button>
-  );
-}
 
 export function ContactForm() {
   const [status, setStatus] = useState<"initial" | "sending" | "sent" | "error">("initial");
@@ -38,7 +28,6 @@ export function ContactForm() {
       data: {
         name: data.name,
         email: data.email,
-        subject: data.subject,
         message: data.message,
       },
     };
@@ -97,10 +86,6 @@ export function ContactForm() {
           <div>
             <Label htmlFor="email">Email</Label>
             <Input id="email" name="email" type="email" placeholder="your@email.com" required />
-          </div>
-          <div>
-            <Label htmlFor="subject">Subject</Label>
-            <Input id="subject" name="subject" placeholder="Inquiry Subject" />
           </div>
           <div>
             <Label htmlFor="message">Message</Label>
