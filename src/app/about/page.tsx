@@ -56,15 +56,15 @@ export default function AboutPage() {
           <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary tracking-tight mb-12">
             Meet Our Team
           </h2>
-          <div className="grid grid-cols-1 gap-8 lg:gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
             {teamMembers.map((member, index) => {
               const memberImage = getPlaceholderImage(member.image);
 
               return (
-                <Card key={member.name} className="bg-secondary/50 overflow-hidden border-border drop-shadow-sm rounded-2xl flex flex-col md:flex-row">
-                  <div className="md:w-2/5 w-full">
+                <Card key={member.name} className="bg-secondary/50 overflow-hidden border-border drop-shadow-sm rounded-2xl flex flex-col">
+                  <div className="w-full">
                     {memberImage && (
-                        <div className="relative w-full h-full min-h-[200px] md:min-h-0">
+                        <div className="relative w-full h-64">
                           <Image
                             src={memberImage.imageUrl}
                             alt={member.name}
@@ -75,7 +75,7 @@ export default function AboutPage() {
                         </div>
                     )}
                   </div>
-                  <div className="md:w-3/5 p-6 text-left flex flex-col justify-center">
+                  <div className="p-6 text-left flex flex-col justify-center flex-grow">
                     <h3 className="font-headline text-2xl font-bold">{member.name}</h3>
                     <p className="text-primary font-semibold text-lg mb-4">{member.role}</p>
                     <p className="text-muted-foreground text-sm">{member.bio}</p>
