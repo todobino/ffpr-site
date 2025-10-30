@@ -9,7 +9,7 @@ export function Footer() {
         <div className="flex items-center justify-between">
           <Logo />
           <p className="text-sm text-muted-foreground text-right">
-            © {new Date().getFullYear()} {siteConfig.name}. All Rights Reserved.
+            © {new Date().getFullYear()} {siteConfig.name} LLC. All Rights Reserved.
           </p>
         </div>
         <div>
