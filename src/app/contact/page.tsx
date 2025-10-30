@@ -45,7 +45,7 @@ export default function ContactPage() {
 
       <div className="container py-12 md:py-24">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          <div className="space-y-8">
+          <div className="space-y-8 flex flex-col justify-center">
             <div className="flex items-start gap-4">
               <div className="p-3 bg-primary/10 rounded-full text-primary">
                 <Mail className="h-6 w-6" />
