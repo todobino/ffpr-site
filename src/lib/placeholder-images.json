@@ -43,10 +43,10 @@
       "imageHint": "professional headshot man"
     },
     {
-      "id": "team-member-3",
-      "description": "Professional headshot of a person, the community manager.",
-      "imageUrl": "https://randomuser.me/api/portraits/lego/1.jpg",
-      "imageHint": "lego person"
+      "id": "pat-jordon-profile",
+      "description": "Profile photo of Pat Jordon.",
+      "imageUrl": "/Pat-Profile.jpg",
+      "imageHint": "professional headshot man"
     },
     {
       "id": "philip-sarsons-profile",
