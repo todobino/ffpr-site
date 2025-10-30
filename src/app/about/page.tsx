@@ -61,7 +61,7 @@ export default function AboutPage() {
               const memberImage = getPlaceholderImage(member.image);
 
               return (
-                <Card key={member.name} className="bg-secondary/50 overflow-hidden border-border drop-shadow-sm rounded-2xl flex flex-col md:flex-row">
+                <Card key={member.name} className="bg-white overflow-hidden border-border drop-shadow-sm rounded-2xl flex flex-col md:flex-row">
                   <div className="relative md:w-2/5 w-full">
                     {memberImage && (
                         <div className="relative w-full h-full min-h-64 md:min-h-full">
