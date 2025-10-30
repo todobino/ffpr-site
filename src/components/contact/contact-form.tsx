@@ -75,7 +75,7 @@ export function ContactForm() {
   return (
     <Card className="bg-white shadow-lg">
       <CardHeader>
-        <CardTitle className="font-headline text-2xl">Send us a message</CardTitle>
+        <CardTitle className="font-headline text-2xl">Get in Touch!</CardTitle>
       </CardHeader>
       <CardContent>
         <form onSubmit={handleSubmit} className="space-y-4">
