@@ -64,7 +64,7 @@ export default function EventsPage() {
                 <CardDescription className="flex-grow text-base text-foreground/80">{event.description}</CardDescription>
                 <div className="mt-6 bg-primary/10 p-4 rounded-lg flex items-center justify-center gap-3">
                   <Info className="h-5 w-5 text-primary flex-shrink-0" />
-                  <p className="text-sm text-primary font-semibold">Exact date to be announced after the New Orleans Investment Conference.</p>
+                  <p className="text-sm text-primary font-semibold">Exact date to be announced after the New Orleans Investment Conference 2025.</p>
                 </div>
                 <div className="mt-6">
                   <EventRsvpForm eventId={event.title} />
