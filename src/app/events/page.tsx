@@ -3,7 +3,7 @@ import Image from "next/image";
 import { getPlaceholderImage } from "@/lib/placeholder-images";
 import { events } from "@/lib/data";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Clock, Info } from "lucide-react";
+import { Clock, Info, Calendar } from "lucide-react";
 import { EventRsvpForm } from "@/components/events/event-rsvp-form";
 
 
