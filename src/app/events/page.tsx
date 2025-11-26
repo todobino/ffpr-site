@@ -3,7 +3,7 @@ import Image from "next/image";
 import { getPlaceholderImage } from "@/lib/placeholder-images";
 import { events } from "@/lib/data";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Clock, Info, Calendar } from "lucide-react";
+import { Clock, Info, Calendar, MapPin } from "lucide-react";
 import { EventRsvpForm } from "@/components/events/event-rsvp-form";
 
 
@@ -55,8 +55,8 @@ export default function EventsPage() {
                     <span>{event.date}</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Clock className="h-4 w-4 text-primary" />
-                    <span>{event.time}</span>
+                    <MapPin className="h-4 w-4 text-primary" />
+                    <span>{event.location}</span>
                   </div>
                 </div>
               </CardHeader>

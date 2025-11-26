@@ -98,7 +98,7 @@ export const events = [
   {
     title: 'Investor On-Site Weekend',
     date: 'Feb/March 2026',
-    time: 'A Catered Weekend Experience',
+    location: 'Freedom Farms, Puerto Rico',
     description: 'An exclusive opportunity for accredited investors to explore private placement opportunities at Freedom Farms. Enjoy a fully catered weekend with farm-fresh food, craft drinks, stunning mountain views, and a firsthand look at our carbon-negative enterprise.',
     image: 'event-1',
     icon: Calendar
