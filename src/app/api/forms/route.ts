@@ -59,6 +59,11 @@ export async function POST(req: NextRequest) {
     const body = await req.json();
     const type = body?.type as FormType;
 
+    // The contact form is now handled by Formspree, so we can ignore it here.
+    if (type === 'contact') {
+      return NextResponse.json({ ok: true, message: "Contact form handled by client." });
+    }
+
     if (!type || !(type in FORM_REGISTRY)) {
       return NextResponse.json({ error: "Unknown form type" }, { status: 400 });
     }
