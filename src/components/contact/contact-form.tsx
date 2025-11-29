@@ -7,6 +7,7 @@ import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
+import { CheckCircle } from "lucide-react";
 
 export function ContactForm() {
   const [state, handleSubmit] = useForm("mblvvvop");
@@ -14,11 +15,16 @@ export function ContactForm() {
   if (state.succeeded) {
     return (
       <Card className="bg-white shadow-lg">
-        <CardHeader>
-          <CardTitle className="font-headline text-2xl">Thank You!</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <p className="text-foreground/80">Your message has been sent successfully. We'll be in touch soon.</p>
+        <CardContent className="p-8 flex flex-col items-center justify-center text-center space-y-4">
+          <div className="p-3 rounded-full bg-primary/10">
+            <CheckCircle className="h-16 w-16 text-primary" />
+          </div>
+          <div className="space-y-2">
+            <CardTitle className="font-headline text-2xl">Thank You!</CardTitle>
+            <p className="text-foreground/80">
+              Your message has been sent successfully. We'll be in touch soon.
+            </p>
+          </div>
         </CardContent>
       </Card>
     );
