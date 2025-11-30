@@ -1,74 +1,28 @@
 
 "use client";
 
-import { useState } from "react";
-import { useToast } from "@/hooks/use-toast";
+import { useForm, ValidationError } from "@formspree/react";
 import { CardContent } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { CheckCircle, Info } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
 
 export function EventRsvpForm({ eventId }: { eventId: string }) {
-  const [status, setStatus] = useState<"initial" | "sending" | "sent" | "error">("initial");
-  const [error, setError] = useState<string | null>(null);
+  const [state, handleSubmit] = useForm("movogowl");
   const { toast } = useToast();
 
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    setStatus("sending");
-    setError(null);
-
-    const form = e.currentTarget;
-    const formData = new FormData(form);
-    const data = Object.fromEntries(formData.entries());
-
-    const payload = {
-      type: "eventRegistration",
-      data: {
-        name: data.name,
-        email: data.email,
-        eventId: data.eventId,
-      },
-    };
-
-    try {
-      const response = await fetch("/api/forms", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-      });
-
-      if (response.ok) {
-        setStatus("sent");
-        toast({
-          title: "Success!",
-          description: "Thank you for your interest! We've received your RSVP and will send more details soon.",
-        });
-        form.reset();
-      } else {
-        const result = await response.json();
-        setStatus("error");
-        setError(result.error || "An unexpected error occurred.");
-        toast({
-          variant: "destructive",
-          title: "Error",
-          description: result.error || "Could not submit RSVP.",
-        });
-      }
-    } catch (err) {
-      setStatus("error");
-      const errorMessage = err instanceof Error ? err.message : "An unexpected network error occurred.";
-      setError(errorMessage);
-      toast({
-        variant: "destructive",
-        title: "Error",
-        description: errorMessage,
-      });
-    } finally {
-        if (status !== 'sent') {
-            setStatus('initial');
-        }
-    }
+  if (state.succeeded) {
+    return (
+        <div className="mt-6 bg-primary/10 p-4 rounded-lg flex flex-col items-center justify-center gap-3 text-center">
+            <CheckCircle className="h-10 w-10 text-primary" />
+            <h3 className="font-headline text-lg font-semibold text-primary">RSVP Received!</h3>
+            <p className="text-sm text-primary font-semibold">
+                Thank you for your interest. We'll be in touch with more details soon.
+            </p>
+        </div>
+    );
   }
 
   return (
@@ -84,6 +38,12 @@ export function EventRsvpForm({ eventId }: { eventId: string }) {
             aria-label="Name"
             required
           />
+           <ValidationError 
+              prefix="Name" 
+              field="name"
+              errors={state.errors}
+              className="text-sm text-destructive mt-1"
+            />
         </div>
         <div>
           <Label htmlFor="email" className="sr-only">Email</Label>
@@ -95,13 +55,21 @@ export function EventRsvpForm({ eventId }: { eventId: string }) {
             aria-label="Email"
             required
           />
+           <ValidationError 
+              prefix="Email" 
+              field="email"
+              errors={state.errors}
+              className="text-sm text-destructive mt-1"
+            />
         </div>
-        <Button type="submit" disabled={status === 'sending'} className="w-full">
-          {status === 'sending' ? "Submitting..." : "RSVP to Express Interest"}
+        <Button type="submit" disabled={state.submitting} className="w-full">
+          {state.submitting ? "Submitting..." : "RSVP to Express Interest"}
         </Button>
-        {status === 'error' && error && (
-          <p className="text-sm text-destructive mt-2">{error}</p>
-        )}
+        {state.errors && Object.keys(state.errors).length > 0 && (
+             <p className="text-sm text-destructive mt-2">
+                There was an error with your submission. Please check the fields and try again.
+             </p>
+          )}
       </form>
     </CardContent>
   );

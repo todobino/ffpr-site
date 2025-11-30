@@ -59,9 +59,9 @@ export async function POST(req: NextRequest) {
     const body = await req.json();
     const type = body?.type as FormType;
 
-    // The contact form is now handled by Formspree, so we can ignore it here.
-    if (type === 'contact') {
-      return NextResponse.json({ ok: true, message: "Contact form handled by client." });
+    // The contact and event forms are now handled by Formspree, so we can ignore them.
+    if (type === 'contact' || type === 'eventRegistration') {
+      return NextResponse.json({ ok: true, message: "Form handled by client-side integration." });
     }
 
     if (!type || !(type in FORM_REGISTRY)) {
@@ -82,7 +82,7 @@ export async function POST(req: NextRequest) {
         url: req.headers.get("referer") ?? undefined,
         ip: req.headers.get("x-forwarded-for")?.split(",")[0],
         ua: req.headers.get("user-agent") ?? undefined,
-        ts: new date().toISOString(),
+        ts: new Date().toISOString(),
       };
 
       const payload = { blocks: toBlocks(cfg.title, type, parsed.data, meta) };
