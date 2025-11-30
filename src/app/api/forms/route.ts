@@ -82,7 +82,7 @@ export async function POST(req: NextRequest) {
         url: req.headers.get("referer") ?? undefined,
         ip: req.headers.get("x-forwarded-for")?.split(",")[0],
         ua: req.headers.get("user-agent") ?? undefined,
-        ts: new Date().toISOString(),
+        ts: new date().toISOString(),
       };
 
       const payload = { blocks: toBlocks(cfg.title, type, parsed.data, meta) };
